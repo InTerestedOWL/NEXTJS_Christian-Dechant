@@ -1,4 +1,4 @@
-export default function WhatIAmGoodAt() {
+export default function Services() {
   return (
     <div className="container py-16 md:py-20" id="services">
       <h2
@@ -19,13 +19,13 @@ export default function WhatIAmGoodAt() {
           <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
             <div className="hidden group-hover:block">
               <img
-                src="/assets/img/icon-development-white.svg"
+                src="icon-development-white.svg"
                 alt="development icon"
               />
             </div>
             <div className="block group-hover:hidden">
               <img
-                src="/assets/img/icon-development-black.svg"
+                src="icon-development-black.svg"
                 alt="development icon"
               />
             </div>
@@ -50,13 +50,13 @@ export default function WhatIAmGoodAt() {
           <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
             <div className="hidden group-hover:block">
               <img
-                src="/assets/img/icon-development-white.svg"
+                src="icon-development-white.svg"
                 alt="development icon"
               />
             </div>
             <div className="block group-hover:hidden">
               <img
-                src="/assets/img/icon-development-black.svg"
+                src="icon-development-black.svg"
                 alt="development icon"
               />
             </div>
@@ -80,13 +80,13 @@ export default function WhatIAmGoodAt() {
           <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
             <div className="hidden group-hover:block">
               <img
-                src="/assets/img/icon-mobile-white.svg"
+                src="icon-mobile-white.svg"
                 alt="Mobile Application icon"
                 />
             </div>
             <div className="block group-hover:hidden">
               <img
-                src="/assets/img/icon-mobile-black.svg"
+                src="icon-mobile-black.svg"
                 alt="Mobile Application icon"
               />
             </div>
@@ -112,13 +112,13 @@ export default function WhatIAmGoodAt() {
           <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
             <div className="hidden group-hover:block">
               <img
-                src="/assets/img/icon-content-white.svg"
+                src="icon-content-white.svg"
                 alt="content marketing icon"
               />
             </div>
             <div className="block group-hover:hidden">
               <img
-                src="/assets/img/icon-content-black.svg"
+                src="icon-content-black.svg"
                 alt="content marketing icon"
               />
             </div>
@@ -142,13 +142,13 @@ export default function WhatIAmGoodAt() {
           <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
             <div className="hidden group-hover:block">
               <img
-                src="/assets/img/icon-content-white.svg"
+                src="icon-content-white.svg"
                 alt="content marketing icon"
               />
             </div>
             <div className="block group-hover:hidden">
               <img
-                src="/assets/img/icon-content-black.svg"
+                src="icon-content-black.svg"
                 alt="content marketing icon"
               />
             </div>
@@ -174,13 +174,13 @@ export default function WhatIAmGoodAt() {
           <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
             <div className="hidden group-hover:block">
               <img
-                src="/assets/img/icon-content-white.svg"
+                src="icon-content-white.svg"
                 alt="content marketing icon"
               />
             </div>
             <div className="block group-hover:hidden">
               <img
-                src="/assets/img/icon-content-black.svg"
+                src="icon-content-black.svg"
                 alt="content marketing icon"
               />
             </div>
@@ -207,13 +207,13 @@ export default function WhatIAmGoodAt() {
           <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
             <div className="hidden group-hover:block">
               <img
-                src="/assets/img/icon-content-white.svg"
+                src="icon-content-white.svg"
                 alt="content marketing icon"
               />
             </div>
             <div className="block group-hover:hidden">
               <img
-                src="/assets/img/icon-content-black.svg"
+                src="icon-content-black.svg"
                 alt="content marketing icon"
               />
             </div>
@@ -238,13 +238,13 @@ export default function WhatIAmGoodAt() {
           <div className="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
             <div className="hidden group-hover:block">
               <img
-                src="/assets/img/icon-content-white.svg"
+                src="icon-content-white.svg"
                 alt="content marketing icon"
               />
             </div>
             <div className="block group-hover:hidden">
               <img
-                src="/assets/img/icon-content-black.svg"
+                src="icon-content-black.svg"
                 alt="content marketing icon"
               />
             </div>

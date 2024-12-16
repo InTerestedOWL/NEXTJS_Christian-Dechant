@@ -11,7 +11,7 @@ export default function Clients() {
           <div className="flex flex-wrap items-center justify-center pt-4 sm:pt-4">
             <span className="m-8 block">
               <img
-                src="/assets/img/socialinsiders.png"
+                src="socialinsiders.png"
                 alt="client logo"
                 className="mx-auto block h-12 w-auto"
               />

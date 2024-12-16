@@ -2,7 +2,7 @@ export default function FinishedProjects() {
   return (
     <div
       className="bg-cover bg-top bg-no-repeat pb-16 md:py-16 lg:py-24"
-      style="background-image: url(/assets/img/experience-figure.png)"
+      style="background-image: url(experience-figure.png)"
       id="statistics"
     >
       <div className="container">
@@ -15,7 +15,7 @@ export default function FinishedProjects() {
             >
               <div>
                 <img
-                  src="/assets/img/icon-project.svg"
+                  src="icon-project.svg"
                   className="mx-auto h-12 w-auto md:h-20"
                   alt="icon project"
                 />
@@ -37,7 +37,7 @@ export default function FinishedProjects() {
             >
               <div>
                 <img
-                  src="/assets/img/icon-award.svg"
+                  src="icon-award.svg"
                   className="mx-auto h-12 w-auto md:h-20"
                   alt="icon award"
                 />
@@ -59,7 +59,7 @@ export default function FinishedProjects() {
             >
               <div>
                 <img
-                  src="/assets/img/icon-happy.svg"
+                  src="icon-happy.svg"
                   className="mx-auto h-12 w-auto md:h-20"
                   alt="icon happy clients"
                 />
@@ -81,7 +81,7 @@ export default function FinishedProjects() {
             >
               <div>
                 <img
-                  src="/assets/img/icon-puzzle.svg"
+                  src="icon-puzzle.svg"
                   className="mx-auto h-12 w-auto md:h-20"
                   alt="icon puzzle"
                 />

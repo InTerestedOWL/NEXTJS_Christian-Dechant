@@ -1,9 +1,18 @@
-export default function WhoAmI() {
+import TitleWithText from "@/app/components/shared/titleWithText";
+
+export default function About() {
   return (
     <div className="bg-grey-50" id="about">
       <div className="container flex flex-col items-center py-16 md:py-20 lg:flex-row">
         <div className="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
-          <h2
+          <TitleWithText
+            title="Who am I?"
+            subtitle="I'm Christian, an App, Web and Mobile Developer and DevOp"
+            titleText="I am an enthusiastic App, Web and Mobile Developer with a broad range of experience about 6+ years.
+            At the moment I am working at Reservix GmbH in Freiburg im Breisgau Germany. But in my freetime I am
+            interested in new projects,
+            experiences and jobs. I am working as a freelancer besides my regular job."></TitleWithText>
+          {/*<h2
             className="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
           >
             Who am I?
@@ -18,7 +27,7 @@ export default function WhoAmI() {
             At the moment I am working at Reservix GmbH in Freiburg im Breisgau Germany. But in my freetime I am
             interested in new projects,
             experiences and jobs. I am working as a freelancer besides my regular job.
-          </p>
+          </p>*/}
           <div
             className="flex flex-col justify-center pt-6 sm:flex-row lg:justify-start"
           >
@@ -70,7 +79,7 @@ export default function WhoAmI() {
               <h3 className="font-body text-3xl font-bold text-primary">100%</h3>
             </div>
             <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style="width: 100%"></div>
+              <div className="h-3 rounded-full bg-primary" style={{width: 100+ '%'}}></div>
             </div>
           </div>
           <div className="pt-6">
@@ -79,7 +88,7 @@ export default function WhoAmI() {
               <h3 className="font-body text-3xl font-bold text-primary">100%</h3>
             </div>
             <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style="width: 100%"></div>
+              <div className="h-3 rounded-full bg-primary" style={{width: 100+ '%'}}></div>
             </div>
           </div>
           <div className="pt-6">
@@ -88,7 +97,7 @@ export default function WhoAmI() {
               <h3 className="font-body text-3xl font-bold text-primary">90%</h3>
             </div>
             <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style="width: 90%"></div>
+              <div className="h-3 rounded-full bg-primary" style={{width: 90+ '%'}}></div>
             </div>
           </div>
           <div className="pt-6">
@@ -99,7 +108,7 @@ export default function WhoAmI() {
               <h3 className="font-body text-3xl font-bold text-primary">100%</h3>
             </div>
             <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style="width: 100%"></div>
+              <div className="h-3 rounded-full bg-primary" style={{width: 100+ '%'}}></div>
             </div>
           </div>
           <div className="pt-6">
@@ -108,7 +117,7 @@ export default function WhoAmI() {
               <h3 className="font-body text-3xl font-bold text-primary">90%</h3>
             </div>
             <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style="width: 90%"></div>
+              <div className="h-3 rounded-full bg-primary" style={{width: 90+ '%'}}></div>
             </div>
           </div>
           <div className="pt-6">
@@ -119,7 +128,7 @@ export default function WhoAmI() {
               <h3 className="font-body text-3xl font-bold text-primary">90%</h3>
             </div>
             <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style="width: 90%"></div>
+              <div className="h-3 rounded-full bg-primary" style={{width: 90+ '%'}}></div>
             </div>
           </div>
           <div className="pt-6">
@@ -129,7 +138,7 @@ export default function WhoAmI() {
               <h3 className="font-body text-3xl font-bold text-primary">100%</h3>
             </div>
             <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style="width: 90%"></div>
+              <div className="h-3 rounded-full bg-primary" style={{width: 90+ '%'}}></div>
             </div>
           </div>
         </div>

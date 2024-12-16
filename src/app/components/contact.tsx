@@ -1,19 +1,19 @@
-import Title from "./shared/title";
+import TitleWithText from "./shared/titleWithText";
 import ContactBox from "./shared/contactbox";
 
 const contactBoxes = [
   { title: 'My Phone', text: '(+49) 179 43 52 34 7', icon: 'bx-phone' }
 ]
 
-export default function ContactForm() {
+export default function Contact() {
   return (
     <div className="container py-16 md:py-20" id="contact">
-      <Title title="Here's a contact form"
-             subtitle="Do you Have Any Questions?"
-             titleText="For now there is just this contact form. Feel free to message me, what ever you would like to know.
+      <TitleWithText title="Here's a contact form"
+                     subtitle="Do you Have Any Questions?"
+                     titleText="For now there is just this contact form. Feel free to message me, what ever you would like to know.
             Later on, there would be a management platform where you can see how I am available and where you can book
             me for one of your projects.
-            For now, I would appreciate to hear from your need."></Title>
+            For now, I would appreciate to hear from your need."></TitleWithText>
       <form className="mx-auto w-full pt-10 sm:w-3/4">
         <div className="flex flex-col md:flex-row">
           <input

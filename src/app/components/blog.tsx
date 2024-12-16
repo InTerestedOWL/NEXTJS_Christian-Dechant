@@ -1,4 +1,4 @@
-export default function Hobbies() {
+export default function Blog() {
   return (
     <div className="bg-grey-50" id="blog">
       <div className="container py-16 md:py-20">
@@ -17,7 +17,7 @@ export default function Hobbies() {
         >
           <a href="/post" className="shadow">
             <div
-              style="background-image: url(/assets/img/post-01.png)"
+              style={{backgroundImage: `url(post-01.png)`}}
               className="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
             >
           <span
@@ -40,7 +40,7 @@ export default function Hobbies() {
           </a>
           <a href="/post" className="shadow">
             <div
-              style="background-image: url(/assets/img/post-02.png)"
+              style={{backgroundImage: `url(post-02.png)`}}
               className="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
             >
           <span
@@ -63,7 +63,7 @@ export default function Hobbies() {
           </a>
           <a href="/post" className="shadow">
             <div
-              style="background-image: url(/assets/img/post-03.png)"
+              style={{backgroundImage: `url(post-03.png)`}}
               className="group relative h-72 bg-cover bg-center bg-no-repeat sm:h-84 lg:h-64 xl:h-72"
             >
           <span

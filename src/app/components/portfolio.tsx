@@ -20,7 +20,7 @@ export default function Portfolio() {
           className="mx-auto transform transition-all hover:scale-105 md:mx-0"
         >
           <img
-            src="/assets/img/LieferanDino.png"
+            src="LieferanDino.png"
             className="w-full shadow"
             alt="portfolio image"
           />
@@ -34,7 +34,7 @@ export default function Portfolio() {
           className="mx-auto transform transition-all hover:scale-105 md:mx-0"
         >
           <img
-            src="/assets/img/portfolio-stripe.jpeg"
+            src="portfolio-stripe.jpeg"
             className="w-full shadow"
             alt="portfolio image"
           />
@@ -44,7 +44,7 @@ export default function Portfolio() {
           className="mx-auto transform transition-all hover:scale-105 md:mx-0"
         >
           <img
-            src="/assets/img/portfolio-fedex.jpeg"
+            src="portfolio-fedex.jpeg"
             className="w-full shadow"
             alt="portfolio image"
           />
@@ -54,7 +54,7 @@ export default function Portfolio() {
           className="mx-auto transform transition-all hover:scale-105 md:mx-0"
         >
           <img
-            src="/assets/img/portfolio-microsoft.jpeg"
+            src="portfolio-microsoft.jpeg"
             className="w-full shadow"
             alt="portfolio image"
           />

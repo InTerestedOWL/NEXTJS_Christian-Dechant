@@ -1,16 +1,13 @@
-export default function WorkExperience() {
+import TitleWithText from "@/app/components/shared/titleWithText";
+import Title from "@/app/components/shared/title";
+
+export default function Experience() {
   return (
     <div className="container py-16 md:py-20" id="work">
-      <h2
-        className="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
-      >
-        My work experience
-      </h2>
-      <h3
-        className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
-      >
-        Here's what I did before and while freelancing
-      </h3>
+      <Title
+        title="My work experience"
+        subtitle="Here's what I did before and while freelancing"
+      ></Title>
 
       <div className="relative mx-auto mt-12 flex w-full flex-col lg:w-2/3">
     <span
@@ -22,7 +19,7 @@ export default function WorkExperience() {
             <div className="flex justify-center md:justify-start">
           <span className="shrink-0">
             <img
-              src="/assets/img/ecoplan.png"
+              src="ecoplan.png"
               className="h-auto w-3/4"
               alt="company logo"
             />
@@ -65,7 +62,7 @@ export default function WorkExperience() {
             <div className="flex justify-center md:justify-start">
           <span className="shrink-0">
             <img
-              src="/assets/img/abstractvoid_big_void.png"
+              src="abstractvoid_big_void.png"
               className="h-auto w-24"
               alt="company logo"
             />
@@ -108,7 +105,7 @@ export default function WorkExperience() {
             <div className="flex justify-center md:justify-start">
           <span className="shrink-0">
             <img
-              src="/assets/img/portal-logo-dark.62488549.png"
+              src="portal-logo-dark.62488549.png"
               className="h-auto w-32"
               alt="company logo"
             />
@@ -153,7 +150,7 @@ export default function WorkExperience() {
             <div className="flex justify-center md:justify-start">
           <span className="shrink-0">
             <img
-              src="/assets/img/portal-logo-dark.62488549.png"
+              src="portal-logo-dark.62488549.png"
               className="h-auto w-32"
               alt="company logo"
             />
@@ -195,7 +192,7 @@ export default function WorkExperience() {
             <div className="flex justify-center md:justify-start">
           <span className="shrink-0">
             <img
-              src="/assets/img/socialinsiders.png"
+              src="socialinsiders.png"
               className="h-auto w-32"
               alt="company logo"
             />

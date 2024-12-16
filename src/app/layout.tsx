@@ -1,15 +1,18 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type {Metadata} from "next";
+import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
+import Header from "@/app/components/header";
+import React from "react";
+import Footer from "@/app/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: [ "latin" ],
+  subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-  subsets: [ "latin" ],
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -55,18 +58,18 @@ export default function RootLayout({
         content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       />
 
-      <link rel="icon" type="image/png" href="/assets/img/favicon.png"/>
+      <link rel="icon" type="image/png" href="favicon.png"/>
 
       <meta name="theme-color" content="#5540af"/>
 
       <meta property="og:site_name" content="Atom Template"/>
 
-      <meta property="og:image" content="//assets/img/social.jpg"/>
+      <meta property="og:image" content="/social.jpg"/>
 
       <meta name="twitter:card" content="summary_large_image"/>
 
       <meta name="twitter:site" content="@tailwindmade"/>
-{/*
+      {/*
       <link
         crossOrigin="crossorigin"
         href="https://fonts.gstatic.com"
@@ -82,12 +85,12 @@ export default function RootLayout({
       <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap"
         rel="stylesheet"
-      />
+      />*/}
 
       <link
-        href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
         rel="stylesheet"
-      />*/}
+      />
 
       <link
         crossOrigin="anonymous"
@@ -106,10 +109,16 @@ export default function RootLayout({
 
     </head>
     <body
-      className={ `${ geistSans.variable } ${ geistMono.variable } antialiased` }
+      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       x-data="{ mobileMenu: false }"
     >
-    { children }
+    <div id="main" className="relative">
+      <div>
+        <Header></Header>
+      {children}
+      </div>
+      <Footer></Footer>
+    </div>
     </body>
     </html>
   );
