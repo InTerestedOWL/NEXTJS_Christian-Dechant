@@ -2,7 +2,7 @@ export default function FinishedProjects() {
   return (
     <div
       className="bg-cover bg-top bg-no-repeat pb-16 md:py-16 lg:py-24"
-      style="background-image: url(experience-figure.png)"
+      style={ { backgroundImage: `url(experience-figure.png)` } }
       id="statistics"
     >
       <div className="container">

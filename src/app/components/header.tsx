@@ -1,12 +1,15 @@
-export default function Header() {
+import LinkWithIcon from "./shared/linkWithIcon";
+import Link from "next/link";
+
+export default function Header({ socials }) {
   return (
     <>
       <div className="w-full z-50 top-0 py-3 sm:py-5  absolute">
         <div className="container flex items-center justify-between">
           <div>
-            <a href="/">
+            <Link href="/">
               <img src="interestedowl.png" className="w-24 lg:w-48" alt="logo image"/>
-            </a>
+            </Link>
           </div>
           <div className="hidden lg:block">
             <ul className="flex items-center">
@@ -206,7 +209,7 @@ export default function Header() {
       <div>
         <div
           className="relative bg-cover bg-center bg-no-repeat py-8"
-          style={{backgroundImage: `url("bg-hero.jpg")`}}
+          style={ { backgroundImage: `url("bg-hero.jpg")` } }
         >
           <div
             className="absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to bg-cover bg-center bg-no-repeat"
@@ -243,31 +246,13 @@ export default function Header() {
                   <div
                     className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0"
                   >
-                    <a href="/">
-                      <i
-                        className="bx bxl-facebook-square text-2xl text-white hover:text-yellow"
-                      ></i>
-                    </a>
-                    <a href="/" className="pl-4">
-                      <i
-                        className="bx bxl-twitter text-2xl text-white hover:text-yellow"
-                      ></i>
-                    </a>
-                    <a href="/" className="pl-4">
-                      <i
-                        className="bx bxl-dribbble text-2xl text-white hover:text-yellow"
-                      ></i>
-                    </a>
-                    <a href="/" className="pl-4">
-                      <i
-                        className="bx bxl-linkedin text-2xl text-white hover:text-yellow"
-                      ></i>
-                    </a>
-                    <a href="/" className="pl-4">
-                      <i
-                        className="bx bxl-instagram text-2xl text-white hover:text-yellow"
-                      ></i>
-                    </a>
+                    { socials.map((item, index) => (
+                      <LinkWithIcon key={ index }
+                                    url={ item.url }
+                                    linkAttribute={ item.classAttribute }
+                                    icon={ item.icon }
+                                    iconAttributes={ 'text-white hover:text-yellow' }></LinkWithIcon>
+                    )) }
                   </div>
                 </div>
               </div>

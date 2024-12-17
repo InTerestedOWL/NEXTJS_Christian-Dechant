@@ -1,5 +1,5 @@
 import TitleWithText from "./shared/titleWithText";
-import ContactBox from "./shared/contactbox";
+import ContactBox from "./shared/contactBox";
 
 const contactBoxes = [
   { title: 'My Phone', text: '(+49) 179 43 52 34 7', icon: 'bx-phone' }
