@@ -1,4 +1,4 @@
-export default function Title({ title, subtitle, text = '' }: { title: string, subtitle: string, text: string }) {
+export default function Title({ title, subtitle, text = '' }: { title: string, subtitle: string, text : string | null }) {
   return (
     <>
       <h2
