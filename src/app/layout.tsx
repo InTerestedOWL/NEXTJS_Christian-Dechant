@@ -133,8 +133,8 @@ export default function RootLayout({
 
     </head>
     <body
-      className={ `${ geistSans.variable } ${ geistMono.variable } antialiased` }
-      x-data="{ mobileMenu: false }"
+      className={ `${ geistSans.variable } ${ geistMono.variable } antialiased overflow-hidden max-h-screen` }
+
     >
     <div id="main" className="relative">
       <div>

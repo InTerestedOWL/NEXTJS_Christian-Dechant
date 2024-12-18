@@ -7,7 +7,7 @@ export default function SoftwareTechnologies({technologies}: {technologies : ITe
     <div className="bg-grey-50" id="clients">
       <div className="container py-16 md:py-20">
         <div className="mx-auto w-full sm:w-3/4 lg:w-full">
-          <Title title="My Tools" subtitle="Here are some of the tools and Languages I could support with!"></Title>
+          <Title title="My Tools" subtitle="Here are some of the tools and Languages I could support with!" text=""></Title>
           <div className="flex flex-wrap items-center justify-center pt-4 sm:pt-4">
             { technologies.map((item, index) => (
               <span className="m-8 block" key={ index }>

@@ -8,6 +8,7 @@ export default function Experience({experiences} : {experiences: IExperience[]})
       <Title
         title="My work experience"
         subtitle="Here's what I did before and while freelancing"
+        text=""
       ></Title>
       <div className="relative mx-auto mt-12 flex w-full flex-col lg:w-2/3">
     <span

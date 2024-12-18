@@ -9,7 +9,6 @@ export default function Header({socials}: {socials: ISocial[]} ) {
   return (
     <>
       <Navbar headerLinks={headerLinks}></Navbar>
-      <MobileNavbar headerLinks={headerLinks}></MobileNavbar>
       <div>
         <div
           className="relative bg-cover bg-center bg-no-repeat py-8"

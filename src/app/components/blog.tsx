@@ -48,7 +48,7 @@ export default function Blog() {
   return (
     <div className="bg-grey-50" id="blog">
       <div className="container py-16 md:py-20">
-        <Title title={'I also like to travel'} subtitle={'Check out my latest travel stories on my German Youtube Channel InTerestedOWL!'}></Title>
+        <Title title={'I also like to travel'} subtitle={'Check out my latest travel stories on my German Youtube Channel InTerestedOWL!'} text=""></Title>
         <div
           className="mx-auto grid w-full grid-cols-1 gap-6 pt-12 sm:w-3/4 lg:w-full lg:grid-cols-3 xl:gap-10"
         >

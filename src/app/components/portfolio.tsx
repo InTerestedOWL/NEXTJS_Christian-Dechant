@@ -8,6 +8,7 @@ export default function Portfolio() {
       <Title
         title={ 'Check out my Portfolio' }
         subtitle={ 'Here&#39;s what I have done in the past' }
+        text=""
       ></Title>
 
       <div
