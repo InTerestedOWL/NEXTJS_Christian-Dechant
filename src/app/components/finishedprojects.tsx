@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function FinishedProjects() {
   return (
     <div
@@ -14,8 +16,9 @@ export default function FinishedProjects() {
               className="flex flex-col items-center justify-center text-center md:flex-row md:text-left"
             >
               <div>
-                <img
-                  src="icon-project.svg"
+                <Image
+                  width="40" height="40"
+                  src="/icon-project.svg"
                   className="mx-auto h-12 w-auto md:h-20"
                   alt="icon project"
                 />
@@ -27,7 +30,7 @@ export default function FinishedProjects() {
                 <h4
                   className="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
                 >
-                  Finished Projects
+                  Startup founded
                 </h4>
               </div>
             </div>
@@ -36,20 +39,21 @@ export default function FinishedProjects() {
               className="flex flex-col items-center justify-center text-center md:flex-row md:text-left"
             >
               <div>
-                <img
-                  src="icon-award.svg"
+                <Image
+                  width="40" height="40"
+                  src="/icon-award.svg"
                   className="mx-auto h-12 w-auto md:h-20"
                   alt="icon award"
                 />
               </div>
               <div className="pt-5 md:pl-5 md:pt-0">
                 <h1 className="font-body text-2xl font-bold text-primary md:text-4xl">
-                  1
+                  1.2
                 </h1>
                 <h4
                   className="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
                 >
-                  Awards Won
+                  Masters Degree
                 </h4>
               </div>
             </div>
@@ -58,20 +62,21 @@ export default function FinishedProjects() {
               className="mt-6 flex flex-col items-center justify-center text-center md:mt-10 md:flex-row md:text-left lg:mt-0"
             >
               <div>
-                <img
-                  src="icon-happy.svg"
+                <Image
+                  width="40" height="40"
+                  src="/icon-happy.svg"
                   className="mx-auto h-12 w-auto md:h-20"
                   alt="icon happy clients"
                 />
               </div>
               <div className="pt-5 md:pl-5 md:pt-0">
                 <h1 className="font-body text-2xl font-bold text-primary md:text-4xl">
-                  1
+                  Multiple
                 </h1>
                 <h4
                   className="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
                 >
-                  Happy Client
+                  Projects
                 </h4>
               </div>
             </div>
@@ -80,8 +85,9 @@ export default function FinishedProjects() {
               className="mt-6 flex flex-col items-center justify-center text-center md:mt-10 md:flex-row md:text-left lg:mt-0"
             >
               <div>
-                <img
-                  src="icon-puzzle.svg"
+                <Image
+                  width="40" height="40"
+                  src="/icon-puzzle.svg"
                   className="mx-auto h-12 w-auto md:h-20"
                   alt="icon puzzle"
                 />

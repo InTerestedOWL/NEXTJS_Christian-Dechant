@@ -1,38 +1,9 @@
 import TitleWithText from "@/app/components/shared/titleWithText";
 import LinkWithIcon from "./shared/linkWithIcon";
+import { ISocial } from "../interfaces";
 
-const socials = [ {
-  name: 'facebook',
-  icon: 'bxl-facebook-square',
-  url: '',
-  classAttribute: ''
-},
-  {
-    name: 'twitter',
-    icon: 'bxl-twitter',
-    url: '',
-    classAttribute: 'pl-4'
-  },
-  {
-    name: 'dribble',
-    icon: 'bxl-dribbble',
-    url: '',
-    classAttribute: 'pl-4'
-  },
-  {
-    name: 'linkedin',
-    icon: 'bxl-linkedin',
-    url: '',
-    classAttribute: 'pl-4'
-  },
-  {
-    name: 'instagram',
-    icon: 'bxl-instagram',
-    url: '',
-    classAttribute: 'pl-4'
-  }]
 
-export default function About() {
+export default function About({socials}: {socials: ISocial[]}) {
   return (
     <div className="bg-grey-50" id="about">
       <div className="container flex flex-col items-center py-16 md:py-20 lg:flex-row">

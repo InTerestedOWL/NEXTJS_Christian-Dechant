@@ -1,26 +1,25 @@
+import Title from "./shared/title";
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Portfolio() {
   return (
     <div className="container py-16 md:py-20" id="portfolio">
-      <h2
-        className="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
-      >
-        Check out my Portfolio
-      </h2>
-      <h3
-        className="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
-      >
-        Here's what I have done in the past
-      </h3>
+
+      <Title
+        title={ 'Check out my Portfolio' }
+        subtitle={ 'Here&#39;s what I have done in the past' }
+      ></Title>
 
       <div
         className="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2"
       >
-        <a
-          href="interestedowl.de"
+        <Link
+          href="/Masterthesis.pdf"
           className="mx-auto transform transition-all hover:scale-105 md:mx-0"
         >
           <img
-            src="LieferanDino.png"
+            src="/LieferanDino.png"
             className="w-full shadow"
             alt="portfolio image"
           />
@@ -28,37 +27,50 @@ export default function Portfolio() {
             web application project. Built with Vue3, Ionic and Laravel Backend.
             I built the Backend part like Authentication, containing Login, Registration, 2FA and the Chat and did the
             deployment part as well.</p>
-        </a>
-        <a
+        </Link>
+        <Link
+          href="/Masterthesis.pdf"
+          target="_blank"
+          rel="nooppener noreferrer"
+          className="mx-auto transform transition-all hover:scale-105 md:mx-0"
+        >
+          <img
+            src="/img_1.png"
+            className="w-full shadow"
+            alt="portfolio image"
+          />
+          <p className="text-grey pt-4 text-sm group-hover:text-white md:text-base">My master's thesis for the degree
+            Master of Applied Computer Science focused on analyzing Kubernetes security architectures and evaluating the
+            effectiveness of Zero Trust principles in mitigating vulnerabilities, balancing enhanced protection with
+            increased resource consumption and complexity.</p>
+        </Link>
+        <Link
           href="/"
           className="mx-auto transform transition-all hover:scale-105 md:mx-0"
         >
           <img
-            src="portfolio-stripe.jpeg"
-            className="w-full shadow"
+            src="/in-progress.svg"
+            className="w-96 shadow justify-center content-center"
             alt="portfolio image"
           />
-        </a>
-        <a
+          <p className="text-grey pt-4 text-sm group-hover:text-white md:text-base">
+            A cool new project with C# .NET and Angular is currently being developed here. It will be a travel planning
+            software.
+          </p>
+        </Link>
+        <Link
           href="/"
           className="mx-auto transform transition-all hover:scale-105 md:mx-0"
         >
           <img
-            src="portfolio-fedex.jpeg"
-            className="w-full shadow"
+            src="/in-progress.svg"
+            className="w-96 shadow justify-center content-center"
             alt="portfolio image"
           />
-        </a>
-        <a
-          href="/"
-          className="mx-auto transform transition-all hover:scale-105 md:mx-0"
-        >
-          <img
-            src="portfolio-microsoft.jpeg"
-            className="w-full shadow"
-            alt="portfolio image"
-          />
-        </a>
+          <p className="text-grey pt-4 text-sm group-hover:text-white md:text-base">
+            A cool new project is currently being developed here.
+          </p>
+        </Link>
       </div>
     </div>
   )

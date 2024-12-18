@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Clients() {
   return (
     <div className="bg-grey-50" id="clients">
@@ -10,7 +12,7 @@ export default function Clients() {
           </h2>
           <div className="flex flex-wrap items-center justify-center pt-4 sm:pt-4">
             <span className="m-8 block">
-              <img
+              <Image
                 src="socialinsiders.png"
                 alt="client logo"
                 className="mx-auto block h-12 w-auto"

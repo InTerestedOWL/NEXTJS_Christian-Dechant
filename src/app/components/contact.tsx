@@ -1,19 +1,17 @@
-import TitleWithText from "./shared/titleWithText";
 import ContactBox from "./shared/contactBox";
+import { IContactBox } from "../interfaces";
+import Title from "./shared/title";
 
-const contactBoxes = [
-  { title: 'My Phone', text: '(+49) 179 43 52 34 7', icon: 'bx-phone' }
-]
 
-export default function Contact() {
+export default function Contact({contactBoxes} : {contactBoxes : IContactBox[]}) {
   return (
     <div className="container py-16 md:py-20" id="contact">
-      <TitleWithText title="Here's a contact form"
+      <Title title="Here's a contact form"
                      subtitle="Do you Have Any Questions?"
-                     titleText="For now there is just this contact form. Feel free to message me, what ever you would like to know.
+                     text="For now there is just this contact form. Feel free to message me, what ever you would like to know.
             Later on, there would be a management platform where you can see how I am available and where you can book
             me for one of your projects.
-            For now, I would appreciate to hear from your need."></TitleWithText>
+            For now, I would appreciate to hear from your need."></Title>
       <form className="mx-auto w-full pt-10 sm:w-3/4">
         <div className="flex flex-col md:flex-row">
           <input
@@ -33,8 +31,8 @@ export default function Contact() {
           className="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-8"
           placeholder="Message"
           id="message"
-          cols="30"
-          rows="10"
+          cols={30}
+          rows={10}
         ></textarea>
         <button
           className="mt-6 flex items-center justify-center rounded bg-primary px-8 py-3 font-header text-lg font-bold uppercase text-white hover:bg-grey-20"
@@ -44,7 +42,7 @@ export default function Contact() {
         </button>
       </form>
       <div className="flex flex-col pt-16 lg:flex-row">
-        { contactBoxes.map((item, index) => (
+        { contactBoxes.map((item: IContactBox, index) => (
           <ContactBox key={ index }
                       title={ item.title }
                       text={ item.text }

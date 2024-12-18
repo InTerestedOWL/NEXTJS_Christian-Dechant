@@ -1,4 +1,13 @@
-export default function TimelineItem({ imageSrc, dateFrom, dateTill, title, description, classAttribute }) {
+import Image from "next/image";
+
+export default function TimelineItem({ imageSrc, dateFrom, dateTill, title, description, classAttribute }: {
+  imageSrc: string,
+  dateFrom: string,
+  dateTill: string,
+  title: string,
+  description: string,
+  classAttribute: string
+}) {
   return (
     <div className="mt-8 flex flex-col text-center md:flex-row md:text-left">
       <div className="md:w-2/5">
@@ -6,7 +15,7 @@ export default function TimelineItem({ imageSrc, dateFrom, dateTill, title, desc
           <span className="shrink-0">
             <img
               src={ imageSrc }
-              className={`h-auto ${classAttribute}`}
+              className={ `h-auto ${ classAttribute }` }
               alt="company logo"
             />
           </span>

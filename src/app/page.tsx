@@ -6,19 +6,28 @@ import FinishedProjects from "@/app/components/finishedprojects";
 import Blog from "@/app/components/blog";
 import Contact from "@/app/components/contact";
 import SoftwareTechnologies from "./components/softwaretechnologies";
-import Clients from "./components/clients";
+import Map from "./components/map";
+import SubFooter from "./components/subfooter";
+import { contactBoxes, experiences, services, socials, technologies } from "./data";
 
 export default function Home() {
   return (
     <>
-      <About></About>
-      <Services></Services>
+      <About
+      socials={socials}></About>
+      <Services
+      services={services}></Services>
       <Portfolio></Portfolio>
-      <SoftwareTechnologies></SoftwareTechnologies>
-      <Experience></Experience>
+      <SoftwareTechnologies
+      technologies={technologies}></SoftwareTechnologies>
+      <Experience
+      experiences={experiences}></Experience>
       <FinishedProjects></FinishedProjects>
       <Blog></Blog>
-      <Contact></Contact>
+      <Contact
+      contactBoxes={contactBoxes}></Contact>
+      <Map></Map>
+      <SubFooter></SubFooter>
     </>
   );
 }

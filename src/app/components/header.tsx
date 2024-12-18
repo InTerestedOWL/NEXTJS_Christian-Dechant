@@ -1,211 +1,15 @@
 import LinkWithIcon from "./shared/linkWithIcon";
-import Link from "next/link";
+import Navbar from "./header/navbar";
+import MobileNavbar from "./header/mobileNavbar";
+import { headerLinks } from "../data";
+import { ISocial } from "../interfaces";
+import Image from "next/image";
 
-export default function Header({ socials }) {
+export default function Header({socials}: {socials: ISocial[]} ) {
   return (
     <>
-      <div className="w-full z-50 top-0 py-3 sm:py-5  absolute">
-        <div className="container flex items-center justify-between">
-          <div>
-            <Link href="/">
-              <img src="interestedowl.png" className="w-24 lg:w-48" alt="logo image"/>
-            </Link>
-          </div>
-          <div className="hidden lg:block">
-            <ul className="flex items-center">
-
-              <li className="group pl-6">
-          
-          <span
-            className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-          >About</span
-          >
-
-                <span
-                  className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                ></span>
-              </li>
-
-              <li className="group pl-6">
-          
-          <span
-            className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-          >Services</span
-          >
-
-                <span
-                  className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                ></span>
-              </li>
-
-              <li className="group pl-6">
-          
-          <span
-            className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-          >Portfolio</span
-          >
-
-                <span
-                  className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                ></span>
-              </li>
-
-              <li className="group pl-6">
-          
-          <span
-            className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-          >Clients</span
-          >
-
-                <span
-                  className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                ></span>
-              </li>
-
-              <li className="group pl-6">
-          
-          <span
-            className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-          >Work</span
-          >
-
-                <span
-                  className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                ></span>
-              </li>
-
-              <li className="group pl-6">
-          
-          <span className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-          >Statistics</span
-          >
-
-                <span
-                  className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                ></span>
-              </li>
-
-              <li className="group pl-6">
-          
-          <span
-            className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-          >Blog</span
-          >
-
-                <span
-                  className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                ></span>
-              </li>
-
-              <li className="group pl-6">
-          
-          <span
-            className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-          >Contact</span
-          >
-
-                <span
-                  className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-                ></span>
-              </li>
-
-            </ul>
-          </div>
-          <div className="block lg:hidden">
-            <button>
-              <i className="bx bx-menu text-4xl text-white"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        className="pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden"
-      >
-        <div
-          className="absolute right-0 min-h-screen w-2/3 bg-primary py-4 px-8 shadow md:w-1/3"
-        >
-          <button
-            className="absolute top-0 right-0 mt-4 mr-4"
-          >
-            <img src="icon-close.svg" className="h-10 w-auto" alt=""/>
-          </button>
-
-          <ul className="mt-8 flex flex-col">
-
-            <li className="py-2">
-        
-        <span
-          className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-        >About</span
-        >
-
-            </li>
-
-            <li className="py-2">
-        
-        <span
-          className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-        >Services</span
-        >
-
-            </li>
-
-            <li className="py-2">
-        
-        <span
-          className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-        >Portfolio</span
-        >
-
-            </li>
-
-            <li className="py-2">
-        
-        <span
-          className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-        >Clients</span
-        >
-
-            </li>
-
-            <li className="py-2">
-        
-        <span
-          className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-        >Work</span
-        >
-
-            </li>
-
-            <li className="py-2">
-        
-        <span
-          className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-        >Statistics</span
-        >
-
-            </li>
-
-            <li className="py-2">
-        
-        <span
-          className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-        >Blog</span
-        >
-
-            </li>
-
-            <li className="py-2">
-        
-        <span
-          className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-        >Contact</span
-        >
-
-            </li>
-          </ul>
-        </div>
-      </div>
+      <Navbar headerLinks={headerLinks}></Navbar>
+      <MobileNavbar headerLinks={headerLinks}></MobileNavbar>
       <div>
         <div
           className="relative bg-cover bg-center bg-no-repeat py-8"
@@ -221,7 +25,7 @@ export default function Header({ socials }) {
             <div className="flex flex-col items-center justify-center lg:flex-row">
               <div className="rounded-full border-8 border-primary shadow-xl">
                 <img
-                  src="Christian%20Dechant.jpg"
+                  src="/Christian%20Dechant.jpg"
                   className="h-48 rounded-full sm:h-56"
                   alt="author"
                 />
@@ -230,7 +34,7 @@ export default function Header({ socials }) {
                 <h1
                   className="text-center font-header text-4xl text-white sm:text-left sm:text-5xl md:text-6xl"
                 >
-                  Hello I'm Christian Dechant
+                  Hello I&#39;m Christian Dechant
                 </h1>
                 <div
                   className="flex flex-col justify-center pt-3 sm:flex-row sm:pt-5 lg:justify-start"
@@ -238,7 +42,7 @@ export default function Header({ socials }) {
                   <div
                     className="flex items-center justify-center pl-0 sm:justify-start md:pl-1"
                   >
-                    <p className="font-body text-lg uppercase text-white">Let's connect</p>
+                    <p className="font-body text-lg uppercase text-white">Let&#39;s connect</p>
                     <div className="hidden sm:block">
                       <i className="bx bx-chevron-right text-3xl text-yellow"></i>
                     </div>
