@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function TimelineItem({ imageSrc, dateFrom, dateTill, title, description, classAttribute }: {
   imageSrc: string,
   dateFrom: string,

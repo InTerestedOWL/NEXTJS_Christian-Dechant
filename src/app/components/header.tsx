@@ -1,9 +1,7 @@
 import LinkWithIcon from "./shared/linkWithIcon";
 import Navbar from "./header/navbar";
-import MobileNavbar from "./header/mobileNavbar";
 import { headerLinks } from "../data";
 import { ISocial } from "../interfaces";
-import Image from "next/image";
 
 export default function Header({socials}: {socials: ISocial[]} ) {
   return (

@@ -39,7 +39,7 @@ export default function Portfolio() {
             className="w-full shadow"
             alt="portfolio image"
           />
-          <p className="text-grey pt-4 text-sm group-hover:text-white md:text-base">My master's thesis for the degree
+          <p className="text-grey pt-4 text-sm group-hover:text-white md:text-base">My master&#39;s thesis for the degree
             Master of Applied Computer Science focused on analyzing Kubernetes security architectures and evaluating the
             effectiveness of Zero Trust principles in mitigating vulnerabilities, balancing enhanced protection with
             increased resource consumption and complexity.</p>

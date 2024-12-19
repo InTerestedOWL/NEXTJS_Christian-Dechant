@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Service({ imgSrcBlack, imgSrcWhite, title, text }: {
   imgSrcBlack: string,
   imgSrcWhite: string,

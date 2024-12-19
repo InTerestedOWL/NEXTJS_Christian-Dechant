@@ -11,11 +11,11 @@ export default function TitleWithText({ title, subtitle, titleText } :{title: st
       >
         {subtitle}
       </h4>
-      <p className="pt-6 font-body leading-relaxed text-grey-20">
+      <div className="pt-6 font-body leading-relaxed text-grey-20">
         <p className="font-body text-grey-10">
           {titleText}
         </p>
-      </p>
+      </div>
     </>
   );
 }
