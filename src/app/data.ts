@@ -1,4 +1,4 @@
-import { IContactBox, IExperience, IHeaderLink, IService, ISocial, ITechnology } from "./interfaces";
+import { IContactBox, IExperience, IHeaderLink, IService, ISkill, ISocial, ITechnology } from "./interfaces";
 
 export const headerLinks: IHeaderLink[] = [
   { href: '/#about', title: 'About' },
@@ -23,6 +23,12 @@ export const socials: ISocial[] = [
     icon: 'bxl-xing',
     url: 'https://www.xing.com/profile/Christian_Dechant6/web_profiles?expandNeffi=true',
     classAttribute: 'pl-4'
+  },
+  {
+    name: 'GitHub',
+    icon: 'bxl-github',
+    url: 'https://github.com/InTerestedOWL',
+    classAttribute: 'pl-4'
   }
 ];
 
@@ -37,6 +43,17 @@ export const technologies: ITechnology[] = [
   { icon: "nextjs.svg" },
   { icon: "node-js-svgrepo-com.svg" },
   { icon: "docker-mark-blue.svg" },
+  { icon: "tailwindcss.svg",  },
+  { icon: "php.svg" },
+  { icon: "typescript.svg", },
+  { icon: "mongodb.svg", },
+  { icon: "postgresql.svg",  },
+  { icon: "mysql.svg",  },
+  { icon: "kubernetes.svg",  },
+  { icon: "mssql.svg",  },
+  { icon: "/aws.svg",  },
+  { icon: "/azure.svg" },
+  { icon: "/cicd.svg" },
 ];
 
 export const services: IService[] = [ {
@@ -122,8 +139,20 @@ export const experiences: IExperience[] = [ {
   }
 ];
 
-export const contactBoxes : IContactBox[] = [
-  { title: '', text: '', icon: ''},
-  { title: 'Reach out', text: 'Feel free to reach out', icon: 'bx-envelope'},
-  { title: '', text: '', icon: ''},
+export const contactBoxes: IContactBox[] = [
+  { title: '', text: '', icon: '' },
+  { title: 'Reach out', text: 'Feel free to reach out', icon: 'bx-envelope' },
+  { title: '', text: '', icon: '' },
+]
+
+export const skills: ISkill[] = [
+  { name: 'Teamwork', percentage: 100 },
+  { name: 'HTML & CSS', percentage: 100 },
+  { name: 'Frontend-Entwicklung (JS, TS)', percentage: 100 },
+  { name: 'JAVA / Kotlin (Android)', percentage: 100 },
+  { name: 'C#', percentage: 100 },
+  { name: 'C/C++', percentage: 70 },
+  { name: 'Clean code', percentage: 100 },
+  { name: 'PHP (Symfony & Laravel)', percentage: 100 },
+  { name: 'CI/CD', percentage: 100 },
 ]

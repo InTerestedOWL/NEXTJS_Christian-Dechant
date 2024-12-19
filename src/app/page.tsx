@@ -8,24 +8,25 @@ import Contact from "@/app/components/contact";
 import SoftwareTechnologies from "./components/softwaretechnologies";
 import Map from "./components/map";
 import SubFooter from "./components/subfooter";
-import { contactBoxes, experiences, services, socials, technologies } from "./data";
+import { contactBoxes, experiences, services, skills, socials, technologies } from "./data";
 
 export default function Home() {
   return (
     <>
       <About
-      socials={socials}></About>
+        socials={ socials }
+        skills={ skills }></About>
       <Services
-      services={services}></Services>
+        services={ services }></Services>
       <Portfolio></Portfolio>
       <SoftwareTechnologies
-      technologies={technologies}></SoftwareTechnologies>
+        technologies={ technologies }></SoftwareTechnologies>
       <Experience
-      experiences={experiences}></Experience>
+        experiences={ experiences }></Experience>
       <FinishedProjects></FinishedProjects>
       <Blog></Blog>
       <Contact
-      contactBoxes={contactBoxes}></Contact>
+        contactBoxes={ contactBoxes }></Contact>
       <Map></Map>
       <SubFooter></SubFooter>
     </>

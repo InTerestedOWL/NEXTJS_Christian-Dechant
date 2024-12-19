@@ -1,123 +1,72 @@
+'use client';
 import TitleWithText from "@/app/components/shared/titleWithText";
 import LinkWithIcon from "./shared/linkWithIcon";
-import { ISocial } from "../interfaces";
+import { ISocial, ISkill } from "../interfaces";
+import { useState } from "react";
+const MAX_SKILLS = 6;
 
+export default function About({ socials, skills }: { socials: ISocial[], skills: ISkill[] }) {
+  const [showAll, setShowAll] = useState(false);
+  const visibleSkills = showAll ? skills : skills.slice(0, MAX_SKILLS);
 
-export default function About({socials}: {socials: ISocial[]}) {
   return (
     <div className="bg-grey-50" id="about">
       <div className="container flex flex-col items-center py-16 md:py-20 lg:flex-row">
-        <div className="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
+        <div className="w-full text-center sm:w-3/4 lg:w-1/2 lg:text-left">
           <TitleWithText
             title="Who am I?"
             subtitle="I'm Christian, an App, Web and Mobile Developer and DevOp"
-            titleText="I am an enthusiastic App, Web and Mobile Developer with a broad range of experience about 6+ years.
-            At the moment I am working at Reservix GmbH in Freiburg im Breisgau Germany. But in my freetime I am
-            interested in new projects,
-            experiences and jobs. I am working as a freelancer besides my regular job."></TitleWithText>
-          <div
-            className="flex flex-col justify-center pt-6 sm:flex-row lg:justify-start"
-          >
+            titleText="I am a passionate and experienced software developer with over 6 years of expertise in app, web, and mobile development. Currently, I work as a Senior Developer at Strauss GmbH & Co. KG, where I specialize in building and maintaining robust solutions using C#. My role includes developing efficient systems and ensuring high-quality code. In addition to my professional career, I am always excited about exploring new projects, enhancing my skills, and taking on innovative challenges. My work philosophy revolves around clean code, team collaboration, and staying updated with the latest industry trends. I’m enthusiastic about crafting solutions that are both technically excellent and user-friendly. If you’re interested in collaborating or learning more about my work, feel free to get in touch. Let’s create something amazing together!"
+          />
+
+          <div className="flex flex-col justify-center pt-6 sm:flex-row lg:justify-start">
             <div className="flex items-center justify-center sm:justify-start">
-              <p className="font-body text-lg font-semibold uppercase text-grey-20">
-                Connect with me
-              </p>
+              <p className="font-body text-lg font-semibold uppercase text-grey-20">Connect with me</p>
               <div className="hidden sm:block">
                 <i className="bx bx-chevron-right text-2xl text-primary"></i>
               </div>
             </div>
             <div className="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
-
-              { socials.map((item, index) => (
-                <LinkWithIcon key={ index }
-                              url={ item.url }
-                              icon={ item.icon }
-                linkAttribute={item.classAttribute}
-                iconAttributes={'text-primary hover:text-yellow'}></LinkWithIcon>
-              )) }
+              {socials.map((item, index) => (
+                <LinkWithIcon key={index}
+                              url={item.url}
+                              icon={item.icon}
+                              linkAttribute={item.classAttribute}
+                              iconAttributes={'text-primary hover:text-yellow'} />
+              ))}
             </div>
           </div>
         </div>
-        <div className="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
-          <div>
-            <div className="flex items-end justify-between">
-              <h4 className="font-body font-semibold uppercase text-black">
-                HTML & CSS
-              </h4>
-              <h3 className="font-body text-3xl font-bold text-primary">100%</h3>
+
+        <div className="w-full pl-0 pt-10 sm:w-3/4 lg:w-1/2 lg:pl-12 lg:pt-0">
+          {visibleSkills.map((skill, index) => (
+            <div
+              key={index}
+              className={`pt-6 transition-opacity duration-500 ${showAll ? "opacity-100" : "opacity-0"} fade-in`}
+              style={{ transition: 'opacity 0.5s ease-in-out' }}
+            >
+              <div className="flex items-end justify-between">
+                <h4 className="font-body font-semibold uppercase text-black">{skill.name}</h4>
+                <h3 className="font-body text-3xl font-bold text-primary">{skill.percentage}%</h3>
+              </div>
+              <div className="mt-2 h-3 w-full rounded-full bg-lila">
+                <div
+                  className="h-3 rounded-full bg-primary"
+                  style={{ width: `${skill.percentage}%` }}
+                ></div>
+              </div>
             </div>
-            <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style={ { width: 100 + '%' } }></div>
-            </div>
-          </div>
-          <div className="pt-6">
-            <div className="flex items-end justify-between">
-              <h4 className="font-body font-semibold uppercase text-black">Java</h4>
-              <h3 className="font-body text-3xl font-bold text-primary">100%</h3>
-            </div>
-            <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style={ { width: 100 + '%' } }></div>
-            </div>
-          </div>
-          <div className="pt-6">
-            <div className="flex items-end justify-between">
-              <h4 className="font-body font-semibold uppercase text-black">C#</h4>
-              <h3 className="font-body text-3xl font-bold text-primary">100%</h3>
-            </div>
-            <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style={ { width: 100 + '%' } }></div>
-            </div>
-          </div>
-          <div className="pt-6">
-            <div className="flex items-end justify-between">
-              <h4 className="font-body font-semibold uppercase text-black">C/C++</h4>
-              <h3 className="font-body text-3xl font-bold text-primary">90%</h3>
-            </div>
-            <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style={ { width: 90 + '%' } }></div>
-            </div>
-          </div>
-          <div className="pt-6">
-            <div className="flex items-end justify-between">
-              <h4 className="font-body font-semibold uppercase text-black">
-                JavaScript | TypeScript
-              </h4>
-              <h3 className="font-body text-3xl font-bold text-primary">100%</h3>
-            </div>
-            <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style={ { width: 100 + '%' } }></div>
-            </div>
-          </div>
-          <div className="pt-6">
-            <div className="flex items-end justify-between">
-              <h4 className="font-body font-semibold uppercase text-black">PHP (Symfony & Laravel)</h4>
-              <h3 className="font-body text-3xl font-bold text-primary">90%</h3>
-            </div>
-            <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style={ { width: 90 + '%' } }></div>
-            </div>
-          </div>
-          <div className="pt-6">
-            <div className="flex items-end justify-between">
-              <h4 className="font-body font-semibold uppercase text-black">DevOPs (Gitlab CI, Teamcity, Terraform,
-                Docker,
-                Kubernetes)</h4>
-              <h3 className="font-body text-3xl font-bold text-primary">90%</h3>
-            </div>
-            <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style={ { width: 90 + '%' } }></div>
-            </div>
-          </div>
-          <div className="pt-6">
-            <div className="flex items-end justify-between">
-              <h4 className="font-body font-semibold uppercase text-black">SQL & noSQL Databases (MSSQL, MySQL,
-                MongoDB)</h4>
-              <h3 className="font-body text-3xl font-bold text-primary">100%</h3>
-            </div>
-            <div className="mt-2 h-3 w-full rounded-full bg-lila">
-              <div className="h-3 rounded-full bg-primary" style={ { width: 90 + '%' } }></div>
-            </div>
-          </div>
+          ))}
+
+          {/* Button for "show more / less" */}
+          {skills.length > MAX_SKILLS && (
+            <button
+              className="mt-6 text-primary font-semibold hover:underline"
+              onClick={() => setShowAll(!showAll)}
+            >
+              {showAll ? "Weniger anzeigen" : "Mehr anzeigen"}
+            </button>
+          )}
         </div>
       </div>
     </div>

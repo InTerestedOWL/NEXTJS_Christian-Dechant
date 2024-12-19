@@ -68,7 +68,7 @@ export default function Contact({ contactBoxes }: { contactBoxes: IContactBox[] 
               setSubmitted(false);
             } } name='name'
             value={ email }
-            type="text"
+            type="email"
             id="email"
             required
           />

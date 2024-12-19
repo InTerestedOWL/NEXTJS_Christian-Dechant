@@ -42,3 +42,8 @@ export interface IMessage {
   sendTo?: string;
   text: string;
 }
+
+export interface ISkill {
+  name: string,
+  percentage: number,
+}
