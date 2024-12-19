@@ -74,7 +74,7 @@ function LayoutContent({
 
       <meta property="og:locale" content="en_US"/>
 
-      <link rel="icon" type="image/png" href="interestedowl.png"/>
+      <link rel="icon" type="image/png" href="Interestedowl.png"/>
 
       <meta name="theme-color" content="#5540af"/>
 

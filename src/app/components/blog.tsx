@@ -38,8 +38,10 @@ export default function Blog() {
           console.log(err);
         }
       } else {
-        const sessionStorageVideos: IVideo[] = JSON.parse(window.sessionStorage.getItem('videos'));
-        setVideos(sessionStorageVideos);
+        if (window.sessionStorage.getItem('videos') !== null) {
+          const sessionStorageVideos: IVideo[] = JSON.parse(window.sessionStorage.getItem('videos')!);
+          setVideos(sessionStorageVideos);
+        }
       }
     };
 

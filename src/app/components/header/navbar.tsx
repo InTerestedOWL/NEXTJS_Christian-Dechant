@@ -18,7 +18,7 @@ export default function Navbar({headerLinks} : {headerLinks: IHeaderLink[]}) {
         <div className="container flex items-center justify-between">
           <div>
             <Link href="/">
-              <img src="/interestedowl.png" className="w-16 lg:w-48" alt="logo image"/>
+              <img src="/Interestedowl.png" className="w-16 lg:w-48" alt="logo image"/>
             </Link>
           </div>
           <div className="hidden lg:block">
