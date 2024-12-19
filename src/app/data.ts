@@ -1,44 +1,27 @@
 import { IContactBox, IExperience, IHeaderLink, IService, ISocial, ITechnology } from "./interfaces";
 
 export const headerLinks: IHeaderLink[] = [
-  { href: '#about', title: 'About' },
-  { href: '#services', title: 'Services' },
-  { href: '#portfolio', title: 'Portfolio' },
-  { href: '#clients', title: 'Clients' },
-  { href: '#work', title: 'Work' },
-  { href: '#statistics', title: 'Statistics' },
-  { href: '#blog', title: 'Blog' },
-  { href: '#contact', title: 'Contact' },
+  { href: '/#about', title: 'About' },
+  { href: '/#services', title: 'Services' },
+  { href: '/#portfolio', title: 'Portfolio' },
+  { href: '/#tools', title: 'tools' },
+  { href: '/#work', title: 'Work' },
+  { href: '/#statistics', title: 'Statistics' },
+  { href: '/#blog', title: 'Blog' },
+  { href: '/#contact', title: 'Contact' },
 ];
 
-export const socials: ISocial[] = [ {
-  name: 'facebook',
-  icon: 'bxl-facebook-square',
-  url: '',
-  classAttribute: ''
-},
-  {
-    name: 'twitter',
-    icon: 'bxl-twitter',
-    url: '',
-    classAttribute: 'pl-4'
-  },
-  {
-    name: 'dribble',
-    icon: 'bxl-dribbble',
-    url: '',
-    classAttribute: 'pl-4'
-  },
+export const socials: ISocial[] = [
   {
     name: 'linkedin',
     icon: 'bxl-linkedin',
-    url: '',
+    url: 'https://www.linkedin.com/in/christian-dechant-a64b7917b/',
     classAttribute: 'pl-4'
   },
   {
-    name: 'instagram',
-    icon: 'bxl-instagram',
-    url: '',
+    name: 'XING',
+    icon: 'bxl-xing',
+    url: 'https://www.xing.com/profile/Christian_Dechant6/web_profiles?expandNeffi=true',
     classAttribute: 'pl-4'
   }
 ];
@@ -69,16 +52,16 @@ export const services: IService[] = [ {
     text: 'I develop apps using Java, C, C++, or C#. With expertise in these languages, I ensure a strong backend while design elements are secondary.'
   },
   {
-    imgSrcWhite: 'icon-mobile-white.svg',
-    imgSrcBlack: 'icon-mobile-black.svg',
-    title: 'Mobile Development',
-    text: 'I create Android apps, multi-OS apps with Xamarin (C#), or progressive web apps (PWAs). Additionally, I configure websites for Android/iOS apps using tools like Ionic.'
-  },
-  {
     imgSrcWhite: 'icon-development-white.svg',
     imgSrcBlack: 'icon-development-black.svg',
     title: 'Application Programming Interfaces (APIs)',
     text: 'I specialize in building APIs for WebSockets, web servers, and microservices. I ensure reliable and efficient backend communication.'
+  },
+  {
+    imgSrcWhite: 'icon-mobile-white.svg',
+    imgSrcBlack: 'icon-mobile-black.svg',
+    title: 'Mobile Development',
+    text: 'I create Android apps, multi-OS apps with Xamarin (C#), or progressive web apps (PWAs). Additionally, I configure websites for Android/iOS apps using tools like Ionic.'
   },
   {
     imgSrcWhite: 'icon-content-white.svg',

@@ -35,3 +35,10 @@ export interface IContactBox {
   icon: string,
   text: string,
 }
+
+export interface IMessage {
+  name: string,
+  email: string;
+  sendTo?: string;
+  text: string;
+}

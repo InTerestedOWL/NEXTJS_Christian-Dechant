@@ -1,23 +1,24 @@
 import Link from "next/link";
 import { IHeaderLink } from "../../interfaces";
-import Image from "next/image";
-import { useState } from "react";
-import { router } from "next/client";
+import { useRouter } from 'next/navigation'; // Richtig für App Router
+import { useStatus } from "../../context";
 
 export default function Navbar({headerLinks} : {headerLinks: IHeaderLink[]}) {
-  const [ status, setStatus ] = useState<boolean>(false);
+  const router = useRouter();
+  const { status, setStatus } = useStatus();
 
   const triggerMobileNavItem = (href: string) => {
     setStatus(false);
     router.push(href);
   }
+
   return (
     <>
       <div className="w-full z-50 top-0 py-3 sm:py-5  absolute">
         <div className="container flex items-center justify-between">
           <div>
             <Link href="/">
-              <Image src="/interestedowl.png" width="96" height="96" className="w-24 lg:w-48" alt="logo image"/>
+              <img src="/interestedowl.png" className="w-16 lg:w-48" alt="logo image"/>
             </Link>
           </div>
           <div className="hidden lg:block">
@@ -44,7 +45,7 @@ export default function Navbar({headerLinks} : {headerLinks: IHeaderLink[]}) {
         </div>
       </div>
       <div
-        className={ "pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden" + (status ? 'opacity-100 pointer-events-auto' : '') }
+        className={ `pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden ${(status ? 'opacity-100 pointer-events-auto' : '')}` }
       >
         <div
           className="absolute right-0 min-h-screen w-2/3 bg-primary py-4 px-8 shadow md:w-1/3"
@@ -53,10 +54,10 @@ export default function Navbar({headerLinks} : {headerLinks: IHeaderLink[]}) {
             className="absolute top-0 right-0 mt-4 mr-4"
             onClick={ () => setStatus(false) }
           >
-            <Image src="/icon-close.svg" width="40" height="40" className="h-10 w-auto" alt=""/>
+            <img src="/icon-close.svg" className="h-10 w-auto" alt=""/>
           </button>
 
-          <ul className={"mt-8 flex flex-col" + (status ? 'hidden': '')} >
+          <ul className={`mt-8 flex flex-col`} >
 
             { headerLinks.map((item, index) => (
               <li className="py-2" key={ index } onClick={ () => triggerMobileNavItem(item.href) }>

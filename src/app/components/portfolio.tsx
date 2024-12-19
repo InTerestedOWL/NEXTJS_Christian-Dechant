@@ -7,7 +7,7 @@ export default function Portfolio() {
 
       <Title
         title={ 'Check out my Portfolio' }
-        subtitle={ 'Here&#39;s what I have done in the past' }
+        subtitle={ "Here's what I have done in the past" }
         text=""
       ></Title>
 
@@ -44,33 +44,33 @@ export default function Portfolio() {
             effectiveness of Zero Trust principles in mitigating vulnerabilities, balancing enhanced protection with
             increased resource consumption and complexity.</p>
         </Link>
-        <Link
-          href="/"
-          className="mx-auto transform transition-all hover:scale-105 md:mx-0"
-        >
-          <img
-            src="/in-progress.svg"
-            className="w-96 shadow justify-center content-center"
-            alt="portfolio image"
-          />
-          <p className="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-            A cool new project with C# .NET and Angular is currently being developed here. It will be a travel planning
-            software.
-          </p>
-        </Link>
-        <Link
-          href="/"
-          className="mx-auto transform transition-all hover:scale-105 md:mx-0"
-        >
-          <img
-            src="/in-progress.svg"
-            className="w-96 shadow justify-center content-center"
-            alt="portfolio image"
-          />
-          <p className="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-            A cool new project is currently being developed here.
-          </p>
-        </Link>
+        {/*<Link*/}
+        {/*  href="/"*/}
+        {/*  className="mx-auto transform transition-all hover:scale-105 md:mx-0"*/}
+        {/*>*/}
+        {/*  <img*/}
+        {/*    src="/in-progress.svg"*/}
+        {/*    className="w-96 shadow justify-center content-center"*/}
+        {/*    alt="portfolio image"*/}
+        {/*  />*/}
+        {/*  <p className="text-grey pt-4 text-sm group-hover:text-white md:text-base">*/}
+        {/*    A cool new project with C# .NET and Angular is currently being developed here. It will be a travel planning*/}
+        {/*    software.*/}
+        {/*  </p>*/}
+        {/*</Link>*/}
+        {/*<Link*/}
+        {/*  href="/"*/}
+        {/*  className="mx-auto transform transition-all hover:scale-105 md:mx-0"*/}
+        {/*>*/}
+        {/*  <img*/}
+        {/*    src="/in-progress.svg"*/}
+        {/*    className="w-96 shadow justify-center content-center"*/}
+        {/*    alt="portfolio image"*/}
+        {/*  />*/}
+        {/*  <p className="text-grey pt-4 text-sm group-hover:text-white md:text-base">*/}
+        {/*    A cool new project is currently being developed here.*/}
+        {/*  </p>*/}
+        {/*</Link>*/}
       </div>
     </div>
   )

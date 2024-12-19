@@ -9,9 +9,26 @@ export default function Footer({socials} : {socials: ISocial[]}) {
         <p className="text-center font-body text-white md:text-left">
           © Copyright 2024. All right reserved, Christian Dechant.
         </p>
-        <p className="text-center font-body text-white">
-          <Link href="imprint"></Link> | <Link href="privacy"></Link>
-        </p>
+        <ul className="flex items-center">
+          <li className="group pl-6">
+
+            <Link href="/imprint"
+                  className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+            >Imprint</Link>
+            <span
+              className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+            ></span>
+          </li>
+          <li className="group pl-6">
+
+            <Link href="/privacy-policy"
+                  className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+            >Privacy Policy</Link>
+            <span
+              className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+            ></span>
+          </li>
+        </ul>
         <div className="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
           { socials.map((item, index) => (
             <LinkWithIcon key={ index }

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Service({ imgSrcBlack, imgSrcWhite, title, text }: {
   imgSrcBlack: string,
   imgSrcWhite: string,
@@ -28,9 +30,9 @@ export default function Service({ imgSrcBlack, imgSrcWhite, title, text }: {
         </h3>
         <p className="text-grey pt-4 text-sm group-hover:text-white md:text-base">
           { text }<br/><br/>
-          Interested? Start <span
+          Interested? Start <Link href="#contact"
           className="cursor-pointer pt-0.5 font-header font-semibold uppercase"
-        >Here!</span> to get in touch.
+        >Here!</Link> to get in touch.
         </p>
       </div>
     </div>

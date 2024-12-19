@@ -4,7 +4,7 @@ import Title from "./shared/title";
 
 export default function SoftwareTechnologies({technologies}: {technologies : ITechnology[]}) {
   return (
-    <div className="bg-grey-50" id="clients">
+    <div className="bg-grey-50" id="tools">
       <div className="container py-16 md:py-20">
         <div className="mx-auto w-full sm:w-3/4 lg:w-full">
           <Title title="My Tools" subtitle="Here are some of the tools and Languages I could support with!" text=""></Title>
