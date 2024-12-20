@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+[![Docker Build & Publish](https://github.com/InTerestedOWL/NEXTJS_Christian-Dechant/actions/workflows/pipeline.yml/badge.svg)](https://github.com/InTerestedOWL/NEXTJS_Christian-Dechant/actions/workflows/pipeline.yml)
+[![Github Integration with Deployment to the Server](https://github.com/InTerestedOWL/YAML_Infrastructure/actions/workflows/pipeline.yml/badge.svg?branch=main)](https://github.com/InTerestedOWL/YAML_Infrastructure/actions/workflows/pipeline.yml)
 
-## Getting Started
+## Hello and Welcome
 
-First, run the development server:
+I am InterestedOWL and this is my NEXTJS Homepage. Showing you all the informations you need to know about me :D.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### How does this page is build
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This page is build via Docker. Therefore you will find a Dockerfile inside of the root of the repository.
+It is copied from the official nextjs
+documentation: [NextJS Documentation]( https://nextjs.org/docs/app/building-your-application/deploying#docker-image)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+These build steps are done via github actions.
+Github actions are so configured, that they first build the image, publish it to the docker hub and then triggering
+another repository (YAML_Infrastructure) github action.
+Which then connects to my server and applying all the fancy shit to it.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Image tags
 
-## Learn More
+Image tags are delivered with the actual commit sha and the latest tag. That way I could use the sha for my
+configuration in the YAML_Infrastructure project and keep overwriting the needed .env informations.
 
-To learn more about Next.js, take a look at the following resources:
+# Have fun looking at my page!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+You find my page here: [[Christian Dechant | Homepage](https://christiandechant.de)]
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Cheers: Christian
