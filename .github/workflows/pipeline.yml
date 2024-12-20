@@ -15,6 +15,7 @@ jobs:
         with:
           fetch-depth: 0
 
+
       - name: Version
         id: version
         uses: juliansangillo/tag-version@v1
