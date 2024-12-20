@@ -1,6 +1,8 @@
 'use server';
 import nodemailer from 'nodemailer';
 import { IMessage } from "../app/interfaces";
+import Link from "next/link";
+import LinkWithIcon from "../app/components/shared/linkWithIcon";
 
 const SMTP_SERVER_HOST = process.env.SMTP_SERVER_HOST;
 const SMTP_SERVER_USERNAME = process.env.SMTP_SERVER_USERNAME;
@@ -104,7 +106,6 @@ function buildPrivateMail(text: string, email: string, name: string) {
       <p>These is an automatic notification. Please do not anser on this mail..</p>
     </div>
   </div>
-
 </body>
 </html>
   `
@@ -166,7 +167,33 @@ function buildRecipientMail(text: string, email: string, name: string) {
       <p>This is an automated confirmation email. If you have any urgent questions, please contact me directly.</p>
     </div>
   </div>
+  <div className="bg-primary">
+      <div className="container flex flex-col justify-between py-6 sm:flex-row">
+        <p className="text-center font-body text-white md:text-left">
+          © Copyright 2024. All right reserved, Christian Dechant.
+        </p>
+        <ul className="flex items-center">
+          <li className="group pl-6">
 
+            <a href="http://christiandechant.de/imprint"
+                  className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+            >Imprint</a>
+            <span
+              className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+            ></span>
+          </li>
+          <li className="group pl-6">
+
+            <a href="https://christiandechant.de/privacy-policy"
+                  className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
+            >Privacy Policy</a>
+            <span
+              className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
+            ></span>
+          </li>
+        </ul>
+      </div>
+    </div>
 </body>
 </html>
   `
