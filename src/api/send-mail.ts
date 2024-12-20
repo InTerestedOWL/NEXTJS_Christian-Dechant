@@ -158,42 +158,24 @@ function buildRecipientMail(text: string, email: string, name: string) {
     <div class="email-content">
       <p>Thank you for reaching out! I have received your message, and I will get back to you as soon as possible. Cheers, Christian</p>
       <p><strong>Your Message:</strong></p>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Name:</strong> ${ name }</p>
+      <p><strong>Email:</strong> ${ email }</p>
       <p><strong>Message:</strong></p>
-      <p>${text}</p>
+      <p>${ text }</p>
     </div>
-    <div class="footer">
-      <p>This is an automated confirmation email. If you have any urgent questions, please contact me directly.</p>
+    <div style="background-color: #f4f4f4; padding: 20px; text-align: center; font-family: Arial, sans-serif; font-size: 14px; color: #555;">
+    <p style="margin: 0; padding: 10px 0;">
+        &copy; 2024 Christian Dechant. All rights reserved.
+    </p>
+    <p style="margin: 0; padding: 10px 0;">
+        <a href="https://christiandechant.de/imprint" style="text-decoration: none; color: #007BFF; margin-right: 15px;">Imprint</a>
+        <a href="https://christiandechant.de/privacy-policy" style="text-decoration: none; color: #007BFF;">Privacy Policy</a>
+    </p>
+    <p style="margin: 0; padding: 10px 0; font-size: 12px; color: #888;">
+        This is an automated email. For urgent inquiries, please contact me directly.
+    </p>
     </div>
   </div>
-  <div className="bg-primary">
-      <div className="container flex flex-col justify-between py-6 sm:flex-row">
-        <p className="text-center font-body text-white md:text-left">
-          © Copyright 2024. All right reserved, Christian Dechant.
-        </p>
-        <ul className="flex items-center">
-          <li className="group pl-6">
-
-            <a href="http://christiandechant.de/imprint"
-                  className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-            >Imprint</a>
-            <span
-              className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-            ></span>
-          </li>
-          <li className="group pl-6">
-
-            <a href="https://christiandechant.de/privacy-policy"
-                  className="cursor-pointer pt-0.5 font-header font-semibold uppercase text-white"
-            >Privacy Policy</a>
-            <span
-              className="block h-0.5 w-full bg-transparent group-hover:bg-yellow"
-            ></span>
-          </li>
-        </ul>
-      </div>
-    </div>
 </body>
 </html>
   `
