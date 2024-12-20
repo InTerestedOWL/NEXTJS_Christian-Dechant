@@ -33,6 +33,7 @@ jobs:
             ${{ secrets.DOCKER_HUB_USERNAME}}/${{ vars.DOCKER_REPOSITORY }}:latest
 
   trigger:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
