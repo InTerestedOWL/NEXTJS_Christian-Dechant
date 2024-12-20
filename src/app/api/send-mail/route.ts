@@ -1,11 +1,11 @@
 'use server';
 import nodemailer from 'nodemailer';
-import { IMessage } from "../app/interfaces";
+import { NextResponse } from "next/server";
 
 const SMTP_SERVER_HOST = process.env.SMTP_SERVER_HOST;
 const SMTP_SERVER_USERNAME = process.env.SMTP_SERVER_USERNAME;
 const SMTP_SERVER_PASSWORD = process.env.SMTP_SERVER_PASSWORD;
-const SITE_MAIL_RECIEVER = process.env.SITE_MAIL_RECIEVER;
+const SITE_MAIL_RECEIVER = process.env.SITE_MAIL_RECIEVER;
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   host: SMTP_SERVER_HOST,
@@ -18,37 +18,63 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-export async function sendMail({
-                                 name,
-                                 email,
-                                 sendTo,
-                                 text,
-                               }: IMessage) {
+export async function POST(req: Request) {
+  const { name, email, sendTo, text } = await req.json();
+
   try {
     await transporter.verify();
+    const info = await transporter.sendMail({
+      from: `No-reply@christiandechant.de <freelancer@christiandechant.de>`,
+      to: SITE_MAIL_RECEIVER,
+      subject: 'New Contact Request',
+      html: buildPrivateMail(text, email, name),
+    });
+
+    await transporter.sendMail({
+      from: `No-reply@christiandechant.de <freelancer@christiandechant.de>`,
+      to: sendTo,
+      subject: 'christiandechant.de: Contact Form Submission Received!',
+      html: buildRecipientMail(text, email, name),
+    });
+
+    NextResponse.json({ message: 'Mail sent successfully', info }, { status: 200 });
   } catch ( error ) {
-    console.error('Something Went Wrong', SMTP_SERVER_USERNAME, SMTP_SERVER_PASSWORD, error);
-    return;
+    console.error('Mail sending error:', error);
+    NextResponse.json({ message: 'Mail sending failed', error }, { status: 500 });
   }
-
-  console.log(name, email);
-  const info = await transporter.sendMail({
-    from: 'No-reply@christiandechant.de <freelancer@christiandechant.de>',
-    to: SITE_MAIL_RECIEVER,
-    subject: 'New contact Request',
-    html: buildPrivateMail(text, email, name),
-  });
-
-  await transporter.sendMail({
-    from: 'No-reply@christiandechant.de <freelancer@christiandechant.de>',
-    to: sendTo,
-    subject: 'christiandechant.de: Contact Form Submission Received!',
-    html: buildRecipientMail(text, email, name),
-  });
-  console.log('Message Sent', info.messageId);
-  console.log('Mail sent to', SITE_MAIL_RECIEVER);
-  return info;
 }
+
+// export async function sendMail({
+//                                  name,
+//                                  email,
+//                                  sendTo,
+//                                  text,
+//                                }: IMessage) {
+//   try {
+//     await transporter.verify();
+//   } catch ( error ) {
+//     console.error('Something Went Wrong', SMTP_SERVER_USERNAME, SMTP_SERVER_PASSWORD, error);
+//     return;
+//   }
+//
+//   console.log(name, email);
+//   const info = await transporter.sendMail({
+//     from: 'No-reply@christiandechant.de <freelancer@christiandechant.de>',
+//     to: SITE_MAIL_RECIEVER,
+//     subject: 'New contact Request',
+//     html: buildPrivateMail(text, email, name),
+//   });
+//
+//   await transporter.sendMail({
+//     from: 'No-reply@christiandechant.de <freelancer@christiandechant.de>',
+//     to: sendTo,
+//     subject: 'christiandechant.de: Contact Form Submission Received!',
+//     html: buildRecipientMail(text, email, name),
+//   });
+//   console.log('Message Sent', info.messageId);
+//   console.log('Mail sent to', SITE_MAIL_RECIEVER);
+//   return info;
+// }
 
 function buildPrivateMail(text: string, email: string, name: string) {
   return `
@@ -95,10 +121,10 @@ function buildPrivateMail(text: string, email: string, name: string) {
   <div class="email-container">
     <h2>New contact request</h2>
     <div class="email-content">
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>E-Mail:</strong> ${email}</p>
+      <p><strong>Name:</strong> ${ name }</p>
+      <p><strong>E-Mail:</strong> ${ email }</p>
       <p><strong>Message:</strong></p>
-      <p>${text}</p>
+      <p>${ text }</p>
     </div>
     <div class="footer">
       <p>These is an automatic notification. Please do not anser on this mail..</p>

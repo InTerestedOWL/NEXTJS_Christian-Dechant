@@ -2,8 +2,7 @@
 import ContactBox from "./shared/contactBox";
 import { IContactBox } from "../interfaces";
 import Title from "./shared/title";
-import {  useState } from "react";
-import { sendMail } from "../../api/send-mail";
+import { useState } from "react";
 
 
 export default function Contact({ contactBoxes }: { contactBoxes: IContactBox[] }) {
@@ -13,20 +12,30 @@ export default function Contact({ contactBoxes }: { contactBoxes: IContactBox[] 
   const [loading, setLoading] = useState(false)
   const [ submitted, setSubmitted ] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    setLoading(true)
-    e.preventDefault()
-    console.log('Sending')
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
 
-    sendMail({ name, text: message, email, sendTo: email }).then(() => {
-      console.log('Response received')
-      console.log('Response succeeded!')
-      setSubmitted(true)
-      setName('')
-      setEmail('')
-      setMessage('')
-      setLoading(false)
-    })
+    try {
+      const response = await fetch('/api/send-mail', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, sendTo: email, text: message }),
+      });
+
+      if ( response.ok ) {
+        setSubmitted(true);
+        setName('');
+        setEmail('');
+        setMessage('');
+      } else {
+        console.error('Error sending mail');
+      }
+    } catch ( error ) {
+      console.error('Error:', error);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (

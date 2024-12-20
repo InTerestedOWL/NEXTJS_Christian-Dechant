@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Title from "./shared/title";
-import { requestVideos } from "../../api/request-videos";
 
 interface IVideo {
   etag: string;
@@ -23,6 +22,26 @@ interface IThumbnailResolution {
   height: number
 }
 
+const requestVideos = async () => {
+  try {
+    const response = await fetch('/api/request-videos', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if ( !response.ok ) {
+      throw new Error(`Error fetching videos: ${ response.statusText }`);
+    }
+
+    const data = await response.json(); // Assuming the API responds with a JSON payload
+    return data; // Return the data to be used in the component
+  } catch ( error ) {
+    console.error('Error in requestVideos:', error);
+    throw error; // Rethrow the error to be caught in `useEffect`
+  }
+};
 
 export default function Blog() {
   const [ videos, setVideos ] = useState<IVideo[]>([]);
