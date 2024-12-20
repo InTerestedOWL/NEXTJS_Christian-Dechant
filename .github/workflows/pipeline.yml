@@ -15,14 +15,6 @@ jobs:
         with:
           fetch-depth: 0
 
-
-#      - name: Version
-#        id: version
-#        uses: juliansangillo/tag-version@v1
-#        with:
-#          production-branch: main
-
-
       - name: Set up Docker Buildx 🚀
         uses: docker/setup-buildx-action@v3
 
