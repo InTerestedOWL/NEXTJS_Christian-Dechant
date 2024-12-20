@@ -37,10 +37,10 @@ export async function POST(req: Request) {
       html: buildRecipientMail(text, email, name),
     });
 
-    NextResponse.json({ message: 'Mail sent successfully', info }, { status: 200 });
+    return NextResponse.json({ message: 'Mail sent successfully', info }, { status: 200 });
   } catch ( error ) {
     console.error('Mail sending error:', error);
-    NextResponse.json({ message: 'Mail sending failed', error }, { status: 500 });
+    return NextResponse.json({ message: 'Mail sending failed', error }, { status: 500 });
   }
 }
 
