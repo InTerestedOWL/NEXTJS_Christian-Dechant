@@ -29,8 +29,10 @@ export default function Blog() {
 
   useEffect(() => {
     const loadVideo = async () => {
+      console.log('session-storage: ', window.sessionStorage.getItem('videos'))
       if ( window.sessionStorage.getItem('videos') === 'undefined' ) {
         try {
+          console.log('firing request');
           const data = await requestVideos(); // Fetch videos from the server function
           setVideos(data.items); // Assuming `data.items` contains the video list
           window.sessionStorage.setItem('videos', JSON.stringify(data.items));
@@ -38,6 +40,7 @@ export default function Blog() {
           console.log(err);
         }
       } else {
+        console.log('taking session storage');
         if (window.sessionStorage.getItem('videos') !== null) {
           const sessionStorageVideos: IVideo[] = JSON.parse(window.sessionStorage.getItem('videos')!);
           setVideos(sessionStorageVideos);
