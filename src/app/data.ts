@@ -29,6 +29,12 @@ export const socials: ISocial[] = [
     icon: 'bxl-github',
     url: 'https://github.com/InTerestedOWL',
     classAttribute: 'pl-4'
+  },
+  {
+    name: 'YouTube',
+    icon: 'bxl-youtube',
+    url: 'https://youtube.com/@interestedowl',
+    classAttribute: 'pl-4'
   }
 ];
 

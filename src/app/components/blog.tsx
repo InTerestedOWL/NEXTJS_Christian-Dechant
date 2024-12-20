@@ -25,7 +25,7 @@ interface IThumbnailResolution {
 const requestVideos = async () => {
   try {
     const response = await fetch('/api/request-videos', {
-      method: 'POST',
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
