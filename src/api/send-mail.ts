@@ -1,8 +1,6 @@
 'use server';
 import nodemailer from 'nodemailer';
 import { IMessage } from "../app/interfaces";
-import Link from "next/link";
-import LinkWithIcon from "../app/components/shared/linkWithIcon";
 
 const SMTP_SERVER_HOST = process.env.SMTP_SERVER_HOST;
 const SMTP_SERVER_USERNAME = process.env.SMTP_SERVER_USERNAME;
