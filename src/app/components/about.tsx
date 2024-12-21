@@ -1,8 +1,9 @@
 'use client';
 import TitleWithText from "@/app/components/shared/titleWithText";
 import LinkWithIcon from "./shared/linkWithIcon";
-import { ISocial, ISkill } from "../interfaces";
+import { ISkill, ISocial } from "../interfaces";
 import { useState } from "react";
+
 const MAX_SKILLS = 6;
 
 export default function About({ socials, skills }: { socials: ISocial[], skills: ISkill[] }) {
@@ -64,7 +65,7 @@ export default function About({ socials, skills }: { socials: ISocial[], skills:
               className="mt-6 text-primary font-semibold hover:underline"
               onClick={() => setShowAll(!showAll)}
             >
-              {showAll ? "Weniger anzeigen" : "Mehr anzeigen"}
+              { showAll ? "Show less" : "Show more" }
             </button>
           )}
         </div>
