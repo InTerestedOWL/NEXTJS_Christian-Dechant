@@ -195,6 +195,6 @@ export const skills: ISkill[] = [
   {
     name: 'Java and Kotlin (Android)',
     percentage: 100,
-    description: 'My development journey began with Java, which laid a strong foundation for my skills. I further honed these skills working with Kotlin for Android app development during my time at ECOPLAN GmbH.'
+    description: 'My development journey began with Java, which laid a strong foundation for my skills. I further honed these skills working with Java EE for Webservice development during my time at ECOPLAN GmbH.'
   }
 ]
