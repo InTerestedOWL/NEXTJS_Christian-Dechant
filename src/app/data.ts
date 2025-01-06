@@ -111,21 +111,15 @@ export const services: IService[] = [ {
     text: 'I implement zero-trust environments and ensure comprehensive application security to protect your systems from vulnerabilities.'
   } ]
 
-export const experiences: IExperience[] = [ {
-  imageSrc: '/ecoplan.png',
-  dateFrom: 'Sep. 2017',
-  dateTill: 'Sep. 2021',
-  title: 'Working Student / Bachelorand',
-  description: 'Building and customizing a crm system for multiple clients. Integrating swiss QR-Code for bills. Working with Tomcat EE and Java for webservices using Java EE',
-  classAttribute: 'w-3/4'
-},
+export const experiences: IExperience[] = [
   {
-    imageSrc: '/abstractvoid_big_void.png',
-    dateFrom: 'Mar. 2020',
-    dateTill: 'Dec. 2024',
-    title: 'Co-Founder and Developer',
-    description: 'Building an innovative inhouse navigation system for large building complex using Bluetooth Low Energy. Working with Laravel, Alpine JS, Tailwind css (TALL-Stack) and NodeJS (erxpressJS) for webservices. ',
-    classAttribute: 'w-24'
+    imageSrc: '/es-logo.svg',
+    dateFrom: 'Oct. 2024',
+    dateTill: 'now',
+    title: 'Full Stack Developer',
+    description: 'Developing microservices with C# .NET and Angular to replace methods of a legacy system.',
+    classAttribute: 'w-12',
+    margin: -25
   },
   {
     imageSrc: '/portal-logo-dark.62488549.png',
@@ -133,16 +127,27 @@ export const experiences: IExperience[] = [ {
     dateTill: 'Sep. 2024',
     title: 'Working Student - Full Stack Developer',
     description: 'Building a reporting Tool for theatres and event clients to make Reporting more easy for them. Working with PHP, TypeScript, MongoDB, Terraform, Mercure',
-    classAttribute: 'w-32'
+    classAttribute: 'w-32',
+    margin: 0
   },
   {
-    imageSrc: '/es-logo.svg',
-    dateFrom: 'Oct. 2024',
-    dateTill: 'now',
-    title: 'Full Stack Developer',
-    description: 'Developing microservices with C# .NET and Angular to replace methods of a legacy system.',
-    classAttribute: 'w-12'
-  }
+    imageSrc: '/abstractvoid_big_void.png',
+    dateFrom: 'Mar. 2020',
+    dateTill: 'Dec. 2024',
+    title: 'Co-Founder and Developer',
+    description: 'Building an innovative inhouse navigation system for large building complex using Bluetooth Low Energy. Working with Laravel, Alpine JS, Tailwind css (TALL-Stack) and NodeJS (erxpressJS) for webservices. ',
+    classAttribute: 'w-24',
+    margin: -25
+  },
+  {
+    imageSrc: '/ecoplan.png',
+    dateFrom: 'Sep. 2017',
+    dateTill: 'Sep. 2021',
+    title: 'Working Student / Bachelorand',
+    description: 'Building and customizing a crm system for multiple clients. Integrating swiss QR-Code for bills. Working with Tomcat EE and Java for webservices using Java EE',
+    classAttribute: 'w-3/4',
+    margin: -5
+  },
 ];
 
 export const contactBoxes: IContactBox[] = [
@@ -152,13 +157,44 @@ export const contactBoxes: IContactBox[] = [
 ]
 
 export const skills: ISkill[] = [
-  { name: 'Teamwork', percentage: 100 },
-  { name: 'HTML & CSS', percentage: 100 },
-  { name: 'Frontend-Entwicklung (JS, TS)', percentage: 100 },
-  { name: 'JAVA / Kotlin (Android)', percentage: 100 },
-  { name: 'C#', percentage: 100 },
-  { name: 'C/C++', percentage: 70 },
-  { name: 'Clean code', percentage: 100 },
-  { name: 'PHP (Symfony & Laravel)', percentage: 100 },
-  { name: 'CI/CD', percentage: 100 },
+  {
+    name: 'Frontend Development (JS, TS, Frameworks)',
+    percentage: 100,
+    description: 'Frontend development is an integral part of my expertise. I am proficient in JavaScript, TypeScript, and modern frameworks such as Next.js, React, Vue.js, and Angular, which I utilize to create dynamic and responsive user interfaces.'
+  },
+  {
+    name: 'Backend Development',
+    percentage: 100,
+    description: 'I have extensive experience in backend development, including working with PHP, Java, and C#. This area remains a core part of my professional skill set, and I have consistently applied these technologies in building robust and scalable systems.'
+  },
+  {
+    name: 'Clean Code',
+    percentage: 100,
+    description: 'Clean code is at the heart of every successful development process. I prioritize writing maintainable, well-structured code that is easily adaptable to changes, ensuring long-term project scalability and team collaboration.'
+  },
+  {
+    name: 'Agile Software Development',
+    percentage: 100,
+    description: 'I firmly believe in the principles of Agile software development. My experience with Agile methodologies, particularly at Reservix, has proven to be an essential approach for creating adaptive and high-quality software solutions.'
+  },
+  {
+    name: 'CI/CD',
+    percentage: 100,
+    description: 'Continuous Integration and Continuous Deployment (CI/CD) are fundamental to modern software practices. I have developed expertise in tools like GitHub Actions, GitLab Pipelines, and TeamCity, which enable me to automate deployment workflows and ensure streamlined delivery of code across environments.'
+  },
+  {
+    name: 'Cloud',
+    percentage: 100,
+    description: 'Cloud computing is an essential part of my technical repertoire. I have experience deploying and managing applications on cloud infrastructure, using Docker Compose to host apps on cloud servers, and continuously adapting to emerging cloud technologies to optimize application performance and scalability.'
+  },
+  {
+    name: 'Kubernetes',
+    percentage: 100,
+    description: 'Kubernetes is a powerful tool for managing containerized applications. I gained substantial experience with Kubernetes while working on my master’s thesis, where I utilized it to manage microservices and automate deployment processes in a scalable manner.'
+  },
+  {
+    name: 'Java and Kotlin (Android)',
+    percentage: 100,
+    description: 'My development journey began with Java, which laid a strong foundation for my skills. I further honed these skills working with Kotlin for Android app development during my time at ECOPLAN GmbH.'
+  }
 ]

@@ -27,7 +27,8 @@ export interface IExperience {
   dateTill: string,
   title: string,
   description: string,
-  classAttribute: string
+  classAttribute: string,
+  margin: number
 }
 
 export interface IContactBox {
@@ -46,4 +47,5 @@ export interface IMessage {
 export interface ISkill {
   name: string,
   percentage: number,
+  description: string,
 }

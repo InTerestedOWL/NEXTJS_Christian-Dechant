@@ -1,16 +1,17 @@
-export default function TimelineItem({ imageSrc, dateFrom, dateTill, title, description, classAttribute }: {
+export default function TimelineItem({ imageSrc, dateFrom, dateTill, title, description, classAttribute, margin }: {
   imageSrc: string,
   dateFrom: string,
   dateTill: string,
   title: string,
   description: string,
-  classAttribute: string
+  classAttribute: string,
+  margin: number
 }) {
   return (
     <div className="mt-8 flex flex-col text-center md:flex-row md:text-left">
       <div className="md:w-2/5">
         <div className="flex justify-center md:justify-start">
-          <span className="shrink-0">
+          <span className="shrink-0" style={ { marginTop: margin + 'px' } }>
             <img
               src={ imageSrc }
               className={ `h-auto ${ classAttribute }` }

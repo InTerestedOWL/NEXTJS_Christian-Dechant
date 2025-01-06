@@ -22,6 +22,7 @@ export default function Experience({experiences} : {experiences: IExperience[]})
                         dateFrom={ item.dateFrom }
                         dateTill={ item.dateTill }
                         classAttribute={ item.classAttribute }
+                        margin={ item.margin }
           ></TimelineItem>
         )) }
       </div>
