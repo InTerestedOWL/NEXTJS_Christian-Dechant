@@ -25,12 +25,12 @@ export default function FinishedProjects() {
               </div>
               <div className="pt-5 md:pl-5 md:pt-0">
                 <h1 className="font-body text-2xl font-bold text-primary md:text-4xl">
-                  1
+                  Full-Stack
                 </h1>
                 <h4
                   className="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
                 >
-                  Startup founded
+                  Development Expertise
                 </h4>
               </div>
             </div>
@@ -48,12 +48,12 @@ export default function FinishedProjects() {
               </div>
               <div className="pt-5 md:pl-5 md:pt-0">
                 <h1 className="font-body text-2xl font-bold text-primary md:text-4xl">
-                  1.2
+                  DevOps
                 </h1>
                 <h4
                   className="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
                 >
-                  Masters Degree
+                  CI/CD Practices
                 </h4>
               </div>
             </div>
@@ -76,7 +76,7 @@ export default function FinishedProjects() {
                 <h4
                   className="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
                 >
-                  Projects
+                  Projects Delivered
                 </h4>
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function FinishedProjects() {
               </div>
               <div className="pt-5 md:pl-5 md:pt-0">
                 <h1 className="font-body text-2xl font-bold text-primary md:text-4xl">
-                  Too much
+                  Numerous
                 </h1>
                 <h4
                   className="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
