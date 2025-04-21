@@ -3,6 +3,7 @@ import ContactBox from "./shared/contactBox";
 import { IContactBox } from "../interfaces";
 import Title from "./shared/title";
 import { useState } from "react";
+import Link from "next/link";
 
 
 export default function Contact({ contactBoxes }: { contactBoxes: IContactBox[] }) {
@@ -11,9 +12,16 @@ export default function Contact({ contactBoxes }: { contactBoxes: IContactBox[] 
   const [ message, setMessage ] = useState('');
   const [loading, setLoading] = useState(false)
   const [ submitted, setSubmitted ] = useState(false)
+  const [ acceptedPrivacy, setAcceptedPrivacy ] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if ( !acceptedPrivacy ) {
+      alert('Please accept the Privacy Policy before submitting.');
+      return;
+    }
+
     setLoading(true);
 
     try {
@@ -28,6 +36,7 @@ export default function Contact({ contactBoxes }: { contactBoxes: IContactBox[] 
         setName('');
         setEmail('');
         setMessage('');
+        setAcceptedPrivacy(false);
       } else {
         console.error('Error sending mail');
       }
@@ -55,7 +64,7 @@ export default function Contact({ contactBoxes }: { contactBoxes: IContactBox[] 
           <p>Your message has been successfully sent. I will get back to you soon!</p>
         </div>
       </div>
-      <form className="mx-auto w-full pt-10 sm:w-3/4" onSubmit={handleSubmit}>
+      <form className="mx-auto w-full pt-10 sm:w-3/4" onSubmit={ handleSubmit }>
         <div className="flex flex-col md:flex-row">
           <input
             className="mr-3 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:w-1/2 lg:mr-5"
@@ -95,6 +104,25 @@ export default function Contact({ contactBoxes }: { contactBoxes: IContactBox[] 
           rows={ 10 }
           required
         ></textarea>
+        <div className="mt-6 flex items-start">
+          <input
+            type="checkbox"
+            id="dsgvo-check"
+            checked={ acceptedPrivacy }
+            onChange={ (e) => setAcceptedPrivacy(e.target.checked) }
+            className="mt-1 h-5 w-5 rounded border-grey-50 text-primary focus:ring-primary"
+            required
+          />
+          <label htmlFor="dsgvo-check" className="ml-3 text-sm font-body text-black">
+            I have read the{ ' ' }
+            <Link
+              href="/privacy-policy"
+              className="cursor-pointer font-header font-semibold uppercase text-primary hover:underline"
+            >
+              Privacy Policy
+            </Link>
+          </label>
+        </div>
         <button type="submit" disabled={ loading }
                 className="mt-6 flex items-center justify-center rounded bg-primary px-8 py-3 font-header text-lg font-bold uppercase text-white hover:bg-grey-20"
         >
