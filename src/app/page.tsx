@@ -9,6 +9,7 @@ import SoftwareTechnologies from "./components/softwaretechnologies";
 import Map from "./components/map";
 import SubFooter from "./components/subfooter";
 import { contactBoxes, experiences, services, skills, socials, technologies } from "./data";
+import PackagesAndPrices from "./components/packagesAndPrices";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         skills={ skills }></About>
       <Services
         services={ services }></Services>
+      <PackagesAndPrices></PackagesAndPrices>
       <Portfolio></Portfolio>
       <SoftwareTechnologies
         technologies={ technologies }></SoftwareTechnologies>
