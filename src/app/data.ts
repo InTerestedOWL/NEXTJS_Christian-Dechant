@@ -3,6 +3,7 @@ import { IContactBox, IExperience, IHeaderLink, IService, ISkill, ISocial, ITech
 export const headerLinks: IHeaderLink[] = [
   { href: '/#about', title: 'About' },
   { href: '/#services', title: 'Services' },
+  { href: '/#pricing', title: 'Offers' },
   { href: '/#portfolio', title: 'Portfolio' },
   { href: '/#tools', title: 'tools' },
   { href: '/#work', title: 'Work' },
