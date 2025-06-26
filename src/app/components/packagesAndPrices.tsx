@@ -1,29 +1,29 @@
 import Title from "./shared/title";
 
 export default function PackagesAndPrices() {
-
   const packages = [
     {
-      title: 'One-Pager (statisch)',
-      price: '500 €',
-      features: [ 'DSGVO-konform', 'Impressum', 'Kein CMS' ],
+      title: 'One-Pager (static)',
+      price: '€500',
+      features: [ 'GDPR compliant', 'Legal notice', 'No CMS' ],
     },
     {
-      title: 'One-Pager (mit CMS)',
-      price: '800 €',
-      features: [ 'DSGVO-konform', 'Impressum', 'Mit CMS – Inhalte selbst pflegen & aktualisieren' ],
+      title: 'One-Pager (with CMS)',
+      price: '€800',
+      features: [ 'GDPR compliant', 'Legal notice', 'With CMS - maintain & update content yourself' ],
     },
     {
-      title: 'Kleine Webseite (4 Seiten)',
-      price: '1.200 €',
-      features: [ '4 Seiten', 'DSGVO-konform', 'Mit CMS – Inhalte selbst pflegen & aktualisieren' ],
+      title: 'Small Website (4 pages)',
+      price: '€1,200',
+      features: [ '4 pages', 'GDPR compliant', 'With CMS - maintain & update content yourself' ],
     },
     {
-      title: 'Mittlere Webseite (8 Seiten)',
-      price: '1.600 €',
-      features: [ '8 Seiten', 'DSGVO-konform', 'Mit CMS – Inhalte selbst pflegen & aktualisieren' ],
+      title: 'Medium Website (8 pages)',
+      price: '€1,600',
+      features: [ '8 pages', 'GDPR compliant', 'With CMS - maintain & update content yourself' ],
     },
   ];
+
   return (
     <div id="pricing" className="bg-grey-50">
       <div className="container py-16 md:py-20">
@@ -42,28 +42,28 @@ export default function PackagesAndPrices() {
                 href="#contact"
                 className="inline-block bg-primary text-white px-4 py-2 rounded hover:bg-primary-dark"
               >
-                Jetzt anfragen
+                Request Now
               </a>
             </div>
           )) }
         </div>
         <div
           className="bg-gradient-to-r from-primary to-indigo-500 text-white shadow-lg rounded-lg p-6 mt-8 justify-center">
-          <h3 className="text-xl font-semibold mb-4">Individuelles Projekt</h3>
-          <p className="text-2xl font-bold  mb-4">ab 2.000 €</p>
+          <h3 className="text-xl font-semibold mb-4">Custom Project</h3>
+          <p className="text-2xl font-bold mb-4">from €2,000</p>
           <ul className="mb-4">
-            <li>✅ Maßgeschneidertes Design</li>
-            <li>✅ Erweiterte Funktionalitäten</li>
-            <li>✅ Persönliche Beratung</li>
+            <li>✅ Custom Design</li>
+            <li>✅ Advanced Features</li>
+            <li>✅ Personal Consultation</li>
           </ul>
           <a
             href="#contact"
             className="inline-block bg-grey-50 text-primary px-4 py-2 rounded hover:bg-primary-dark"
           >
-            Projekt anfragen
+            Request Project
           </a>
         </div>
       </div>
     </div>
-  )
+  );
 }
