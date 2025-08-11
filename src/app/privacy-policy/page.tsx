@@ -152,7 +152,6 @@ export default function PrivacyPolicy() {
           <p className="text-lg leading-relaxed text-gray-700">Langenbieberer Str. 14</p>
           <p className="text-lg leading-relaxed text-gray-700">36145 Hofbieber</p>
           <p className="text-lg leading-relaxed text-gray-700">Deutschland</p>
-          <p className="text-lg leading-relaxed text-gray-700">Phone: 01794352347</p>
           <p className="text-lg leading-relaxed text-gray-700">Email: freelancer@christiandechant.de</p>
           <p className="text-lg leading-relaxed text-gray-700">Website: christiandechant.de</p>
 

@@ -25,7 +25,6 @@ export default function Imprint() {
         <div className="mt-6">
           <p className="text-lg leading-relaxed text-gray-700">
             <strong>Contact:</strong> <br/>
-            Phone: 0179-4352347 <br/>
             E-Mail: <a href="mailto:freelancer@christiandechant.de"
                        className="text-primary underline">freelancer@christiandechant.de</a>
           </p>
