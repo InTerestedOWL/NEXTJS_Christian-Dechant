@@ -51,7 +51,7 @@ export default function Contact({ contactBoxes }: { contactBoxes: IContactBox[] 
     <div className="container py-16 md:py-20" id="contact">
       <Title title="Here's a contact form"
              subtitle="Do you Have Any Questions?"
-             text="Currently, there's just this contact form available. Feel free to reach out with any questions or ideas you have—I’d love to hear from you! In the future, I’ll be adding a management platform where you can check my availability and book me for your projects. For now, I’m looking forward to learning more about your needs!"></Title>
+             text="Currently, there's just this contact form available. Feel free to reach out with any questions or ideas you have—I’d love to hear from you! In the future, I’ll be adding a management platform where you can check my availability and book me for your projects. For now, I’m looking forward to learn more about your needs!"></Title>
       <div id="success-message" className={`mx-auto w-full pt-10 sm:w-3/4 ${!submitted ? `hidden` : ''}`}>
         <div className="bg-primary border-t-4 text-white p-4 mb-4 rounded-lg">
           <div className="flex items-center">

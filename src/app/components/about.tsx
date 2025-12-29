@@ -4,7 +4,7 @@ import LinkWithIcon from "./shared/linkWithIcon";
 import { ISkill, ISocial } from "../interfaces";
 import { useState } from "react";
 
-const MAX_SKILLS = 6;
+const MAX_SKILLS = 8;
 
 export default function About({ socials, skills }: { socials: ISocial[], skills: ISkill[] }) {
   const [ showAll, setShowAll ] = useState(false);
@@ -22,12 +22,23 @@ export default function About({ socials, skills }: { socials: ISocial[], skills:
   return (
     <div className="bg-grey-50" id="about">
       <div className="container flex flex-col items-center py-16 md:py-20 lg:flex-row">
-        <div className="w-full text-center sm:w-3/4 lg:w-1/2 lg:text-left">
-          <TitleWithText
-            title="Who am I?"
-            subtitle="I'm Christian, an App, Web and Mobile Developer and DevOp"
-            titleText="Hi, I’m Christian – a passionate developer with a focus on creating efficient and scalable web, mobile, and app solutions. With over six years of experience in the tech industry, I’m currently working as a Senior Developer at Strauss GmbH & Co. KG. My expertise lies in building robust systems using C#, and I thrive on solving complex technical challenges. I am now focusing on expanding my freelancing opportunities, where I aim to deliver high-quality, user-centric solutions in a variety of domains. Clean code, collaboration, and staying ahead of the latest industry trends are the cornerstones of my work philosophy."
-          />
+        <div className="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
+          <div className="flex flex-col lg:flex-row lg:items-start lg:gap-8">
+            <div className="lg:w-1/4 shrink-0 mb-6 lg:mb-0">
+              <img
+                src="/Christian Dechant.jpg"
+                className="mx-auto rounded-full border-4 border-lila shadow-lg w-48 h-48 lg:w-full lg:h-auto object-cover aspect-square"
+                alt="Christian Dechant"
+              />
+            </div>
+            <div className="w-full lg:w-3/4">
+              <TitleWithText
+                title="Who am I?"
+                subtitle="I'm Christian, an App, Web and Mobile Developer and DevOp"
+                titleText="Hi, I’m Christian – a passionate developer with a focus on creating efficient and scalable web, mobile, and app solutions. With over six years of experience in the tech industry, I’m currently working as a Senior Developer at Strauss GmbH & Co. KG. My expertise lies in building robust systems using C#, and I thrive on solving complex technical challenges. I am now focusing on expanding my freelancing opportunities, where I aim to deliver high-quality, user-centric solutions in a variety of domains. Clean code, collaboration, and staying ahead of the latest industry trends are the cornerstones of my work philosophy."
+              />
+            </div>
+          </div>
           <div className="pt-6 font-body leading-relaxed text-grey-20">
             <p className="font-body text-grey-10">
               Throughout my career, I&#39;ve had the privilege of working on diverse projects in app, web, and mobile
@@ -66,37 +77,41 @@ export default function About({ socials, skills }: { socials: ISocial[], skills:
           </div>
         </div>
 
-        <div className="w-full pl-0 pt-10 sm:w-3/4 lg:w-1/2 lg:pl-12 lg:pt-0">
-          { visibleSkills.map((skill, index) => (
-            <div
-              key={ index }
-              className={ `pt-6 transition-opacity duration-500 ${ showAll ? "opacity-100" : "opacity-0" } fade-in` }
-              style={ { transition: 'opacity 0.5s ease-in-out' } }
-            >
-              <div className="flex items-end justify-between">
-                <h4 className="font-body font-semibold uppercase text-black">{ skill.name }</h4>
-                <h3 className="font-body text-3xl font-bold text-primary">{ skill.percentage } %</h3>
-              </div>
-              <div className="mt-2 h-3 w-full rounded-full bg-lila">
-                <div
-                  className="h-3 rounded-full bg-primary"
-                  style={ { width: `${ skill.percentage }%` } }
-                ></div>
-              </div>
-              <button
-                className="mt-2 text-primary font-semibold hover:underline"
+        <div className="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
+          <div className="grid grid-cols-1 gap-4">
+            { visibleSkills.map((skill, index) => (
+              <div
+                key={ index }
+                className={ `perspective-1000 group relative h-28 w-full cursor-pointer transition-opacity duration-500 ${ showAll ? "opacity-100" : "opacity-0" } fade-in` }
+                style={ { transition: 'opacity 0.5s ease-in-out' } }
                 onClick={ () => toggleDescription(index) }
               >
-                { openDescription === index ? 'Hide Description' : 'Show Description' }
-              </button>
-              <p
-                id={ `desc${ index }` }
-                className={ `font-body text-grey-10 ${ openDescription === index ? 'block' : 'hidden' }` }
-              >
-                { skill.description }
-              </p>
-            </div>
-          )) }
+                <div
+                  className={ `relative h-full w-full transition-all duration-500 preserve-3d ${ openDescription === index ? "rotate-y-180" : "" }` }>
+                  {/* Front Side */ }
+                  <div
+                    className="backface-hidden absolute flex h-full w-full flex-col justify-center rounded bg-white px-6 py-4 shadow-sm border border-lila">
+                    <div className="flex items-end justify-between">
+                      <h4 className="font-body font-semibold uppercase text-black">{ skill.name }</h4>
+                    </div>
+                    <p className="mt-2 text-sm font-body text-grey-10 line-clamp-2">
+                      { skill.intro }
+                    </p>
+                    <p className="mt-2 text-xs text-primary font-semibold uppercase">Click to see details</p>
+                  </div>
+
+                  {/* Back Side */ }
+                  <div
+                    className="rotate-y-180 backface-hidden absolute flex h-full w-full flex-col justify-center rounded bg-primary px-6 py-4 shadow-sm text-white overflow-y-auto">
+                    <h4 className="font-body font-semibold uppercase text-white mb-1">{ skill.name }</h4>
+                    <p className="font-body text-xs leading-tight">
+                      { skill.description }
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )) }
+          </div>
 
           {/* Button for "show more / less" */ }
           { skills.length > MAX_SKILLS && (

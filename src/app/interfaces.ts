@@ -14,13 +14,6 @@ export interface ITechnology {
   icon: string,
 }
 
-export interface IService {
-  imgSrcWhite: string,
-  imgSrcBlack: string,
-  title: string,
-  text: string
-}
-
 export interface IExperience {
   imageSrc: string,
   dateFrom: string,
@@ -47,5 +40,17 @@ export interface IMessage {
 export interface ISkill {
   name: string,
   percentage: number,
+  intro?: string,
   description: string,
+}
+
+export interface IVoluntaryWork {
+  imageSrc: string,
+  dateFrom: string,
+  dateTill: string,
+  title: string,
+  description: string,
+  backTitle?: string,
+  backDescription?: string,
+  backImages?: string[],
 }

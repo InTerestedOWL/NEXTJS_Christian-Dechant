@@ -1,5 +1,4 @@
 import About from "@/app/components/about";
-import Services from "@/app/components/services";
 import Portfolio from "@/app/components/portfolio";
 import Experience from "@/app/components/experience";
 import FinishedProjects from "@/app/components/finishedprojects";
@@ -8,8 +7,10 @@ import Contact from "@/app/components/contact";
 import SoftwareTechnologies from "./components/softwaretechnologies";
 import Map from "./components/map";
 import SubFooter from "./components/subfooter";
-import { contactBoxes, experiences, services, skills, socials, technologies } from "./data";
-import PackagesAndPrices from "./components/packagesAndPrices";
+import { contactBoxes, experiences, skills, socials, technologies, voluntaryWorks } from "./data";
+import Offers from "./components/offers";
+import CustomerTestimonials from "@/app/components/testimonials";
+import VoluntaryWork from "@/app/components/voluntaryWork";
 
 export default function Home() {
   return (
@@ -17,9 +18,11 @@ export default function Home() {
       <About
         socials={ socials }
         skills={ skills }></About>
-      <Services
-        services={ services }></Services>
-      <PackagesAndPrices></PackagesAndPrices>
+      <CustomerTestimonials/>
+      <VoluntaryWork
+        voluntaryWorks={ voluntaryWorks }></VoluntaryWork>
+      <Offers></Offers>
+
       <Portfolio></Portfolio>
       <SoftwareTechnologies
         technologies={ technologies }></SoftwareTechnologies>
