@@ -7,11 +7,9 @@ const SMTP_SERVER_USERNAME = process.env.SMTP_SERVER_USERNAME;
 const SMTP_SERVER_PASSWORD = process.env.SMTP_SERVER_PASSWORD;
 const SITE_MAIL_RECEIVER = process.env.SITE_MAIL_RECIEVER;
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
   host: SMTP_SERVER_HOST,
-  port: 456,
+  port: 465,
   secure: true,
-  from: 'freelancer@christiandechant.de',
   auth: {
     user: SMTP_SERVER_USERNAME,
     pass: SMTP_SERVER_PASSWORD,
@@ -24,14 +22,14 @@ export async function POST(req: Request) {
   try {
     await transporter.verify();
     const info = await transporter.sendMail({
-      from: `No-reply@christiandechant.de <freelancer@christiandechant.de>`,
+      from: `"Christian Dechant" <freelancer@christiandechant.de>`,
       to: SITE_MAIL_RECEIVER,
       subject: 'New Contact Request',
       html: buildPrivateMail(text, email, name),
     });
 
     await transporter.sendMail({
-      from: `No-reply@christiandechant.de <freelancer@christiandechant.de>`,
+      from: `"Christian Dechant" <freelancer@christiandechant.de>`,
       to: sendTo,
       subject: 'christiandechant.de: Contact Form Submission Received!',
       html: buildRecipientMail(text, email, name),
