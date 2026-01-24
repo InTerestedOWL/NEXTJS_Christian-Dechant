@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import Footer from "@/app/components/footer";
 import { socials } from "./data";
 import { StatusProvider, useStatus } from "./context";
+import Script from "next/dist/client/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,6 +60,10 @@ function LayoutContent({
   return (
     <html lang="en">
     <head>
+      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2057905367231396"
+              crossOrigin="anonymous"></Script>
+      <Script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="448beb5d-d24a-4724-b37e-ec3885240aa2"
+              data-blockingmode="auto" type="text/javascript"></Script>
       <meta charSet="utf-8"/>
 
       <meta content="IE=edge,chrome=1" httpEquiv="X-UA-Compatible"/>
@@ -86,7 +91,7 @@ function LayoutContent({
       />
     </head>
     <body
-      className={ `${ geistSans.variable } ${ geistMono.variable } antialiased ${status ? 'overflow-hidden max-h-screen' : ''}` }
+      className={ `${ geistSans.variable } ${ geistMono.variable } antialiased ${ status ? 'overflow-hidden max-h-screen' : '' }` }
 
     >
     <div id="main" className="relative">
