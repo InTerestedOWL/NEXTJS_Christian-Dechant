@@ -48,19 +48,19 @@ export default function RootLayout({
     <html lang="en" className={ `${ geistSans.variable } ${ geistMono.variable }` }>
     <head>
       <Script
-        id="adsense"
-        strategy="beforeInteractive"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2057905367231396"
-        crossOrigin="anonymous"
-        data-cookieconsent="marketing"
-      />
-      <Script
         id="Cookiebot"
         src="https://consent.cookiebot.com/uc.js"
         data-cbid="448beb5d-d24a-4724-b37e-ec3885240aa2"
         data-blockingmode="auto"
         type="text/javascript"
       ></Script>
+      <Script
+        id="adsense"
+        strategy="beforeInteractive"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2057905367231396"
+        crossOrigin="anonymous"
+        data-cookieconsent="marketing"
+      />
       <link
         href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
         rel="stylesheet"
