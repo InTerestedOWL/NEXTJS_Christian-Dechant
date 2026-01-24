@@ -56,10 +56,9 @@ export default function RootLayout({
       ></Script>
       <Script
         id="adsense"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2057905367231396"
         crossOrigin="anonymous"
-        data-cookieconsent="marketing"
       />
       <link
         href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
