@@ -1,4 +1,6 @@
-import React, { createContext, useState, useContext } from 'react';
+"use client";
+
+import React, { createContext, useContext, useState } from 'react';
 
 type StatusContextType = {
   status: boolean;
