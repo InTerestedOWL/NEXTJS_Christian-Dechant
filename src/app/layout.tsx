@@ -54,12 +54,8 @@ export default function RootLayout({
         data-blockingmode="auto"
         type="text/javascript"
       ></Script>
-      <Script
-        id="adsense"
-        strategy="afterInteractive"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2057905367231396"
-        crossOrigin="anonymous"
-      />
+      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2057905367231396"
+              crossOrigin="anonymous"></Script>
       <link
         href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
         rel="stylesheet"
