@@ -54,3 +54,13 @@ export interface IVoluntaryWork {
   backDescription?: string,
   backImages?: string[],
 }
+
+export interface IPortfolioItem {
+  id: string,
+  image: string,
+  title: string,
+  intro: string,
+  description?: string,
+  link?: string,
+  isExternal?: boolean,
+}

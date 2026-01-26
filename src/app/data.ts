@@ -1,4 +1,4 @@
-import { IContactBox, IExperience, IHeaderLink, ISkill, ISocial, ITechnology, IVoluntaryWork } from "./interfaces";
+import { IContactBox, IExperience, IHeaderLink, IPortfolioItem, ISkill, ISocial, ITechnology, IVoluntaryWork } from "./interfaces";
 
 export const headerLinks: IHeaderLink[] = [
   { href: '/#about', title: 'About' },
@@ -184,4 +184,126 @@ export const voluntaryWorks: IVoluntaryWork[] = [
       'In addition to emergency responses, our activities include regular training sessions and drills. These ensure the safe handling of modern equipment and the continuous improvement of operational procedures. Teamwork, readiness, and a strong sense of responsibility are central to our commitment to serving the community.',
     backImages: [ "https://le-cdn.website-editor.net/s/efd7e5d4de204150b1303cccb1527684/dms3rep/multi/opt/IMG_7335-1920w.JPG?Expires=1768989704&Signature=iETmWl2O3eX~~5jZfuj8XbkIhENAgGNYNDMK-V6HBchu4~UUR6Gcs5sKKq5sELPMz3FrE3yLhnnan4UCaah-31jE8Hu4JBlZNOOy5ot6ri9E08oAu37eHamsbYGEkt2gil22DAuOvySFNW5mfy1xxq1ynSL0AejKN5gfzVEu5edCEmM-zw7LuQ6Q~GXMFoj88gROteAqNWjIguoLmXGjpVfUul6ZNqES21D7tA5sGtllXpdy2y2M3b95OxaLas-94SXzTV9DAvu-mYFdbQjrQ7sUIYGrAY8LjgdTH6Snmc3F~WFM3eLpUDvkzK1Tq3iwVmbs~5XAp1506gU7maTHNA__&Key-Pair-Id=K2NXBXLF010TJW" ]
   }
+]
+
+export const portfolioItems: IPortfolioItem[] = [
+  {
+    id: 'thesis',
+    title: "Master's Thesis",
+    image: '/img_1.png',
+    link: '/Masterthesis.pdf',
+    isExternal: true,
+    intro: "My master's thesis for the degree Master of Applied Computer Science focused on analyzing Kubernetes security architectures and evaluating the effectiveness of Zero Trust principles in mitigating vulnerabilities...",
+    description: `
+      <div class="mt-4 text-grey">
+        <strong class="text-black">Abstract</strong><br />
+        Software development is constantly changing, from bare-metal servers to containers and
+        container orchestration platforms such as Kubernetes. Despite the introduction of numerous
+        best practices for securing Kubernetes, the question remains whether these traditional
+        security approaches are sufficient to protect the dynamic and distributed nature of modern
+        Kubernetes environments. In this context, the zero trust concept “Never Trust, Always
+        Verify” is becoming increasingly important.
+        This thesis analyzes the security architecture of Kubernetes clusters to evaluate the effec
+        tiveness of the Zero Trust architecture in identifying and remediating vulnerabilities and
+        mitigating threats to the cluster. Security best practices and components of the zero-trust
+        architecture will be presented and implemented in the Minikube and EKS environments
+        using a sample application.
+        The effectiveness analysis includes a detailed measurement of resource consumption (CPU
+        and memory), threat prevention based on threat techniques, attack vectors and current
+        vulnerabilities for Kubernetes clusters, additional vulnerabilities, attack vectors and chal
+        lenges, and addresses the complexity and effort of integrating a zero trust architecture.
+        This paper analyzes the security architecture of Kubernetes clusters in order to demonstrate
+        the effectiveness of the monitoring, which can be carried out by Grafana, Prometheus and
+        Kiali, is just as essential. The Zero Trust architecture increases resource consumption; in
+        the public cloud cluster in particular, this additional resource consumption can lead to
+        costs that are twice as high compared to a standard setup without Zero Trust. Furthermore,
+        the evaluation of threat prevention shows that security best practices alone can provide
+        comprehensive protection against the threats examined. In addition, the challenges and
+        disadvantages of the zero-trust architecture, such as the increased complexity and the
+        time required for implementation, are discussed. While zero-trust architecture can improve
+        protection against internal threats, it has limited impact on external threats and leads to
+        increased administrative overhead and data volume.
+        For organizations seeking cost-effective solutions and needing to consider the additional
+        administrative burden of zero trust practices, a careful combination of best practices and
+        targeted zero trust measures could provide a balanced solution that considers security and
+        efficiency
+      </div>
+    `
+  },
+  {
+    id: 'jagdtausch',
+    title: 'JagdTausch',
+    image: '/JagdTausch-Projekt.png',
+    link: 'https://jagdtausch.de/',
+    isExternal: true,
+    intro: "JagdTausch is a specialized, mobile-first marketplace platform designed specifically for the hunting community to buy and sell used hunting equipment.",
+    description: `
+      <div class="text-grey">
+        <p class="mb-4">
+          <strong class="text-black">JagdTausch</strong> is a specialized, mobile-first marketplace platform designed specifically for the hunting community to buy and sell used hunting equipment. Built as a high-performance <strong class="text-black">Progressive Web App (PWA)</strong>, it provides a seamless, app-like experience directly in the browser without requiring a download.
+        </p>
+
+        <h4 class="font-bold text-lg mb-2 text-black">Key Features:</h4>
+        <ul class="list-disc ml-5 mb-4">
+          <li><strong class="text-black">Specialized Classifieds:</strong> A dedicated ecosystem for hunting gear, featuring category-based organization and advanced filtering (location, price, etc.).</li>
+          <li><strong class="text-black">User Engagement:</strong> Includes a real-time integrated chat system for secure communication between buyers and sellers, a favorites watchlist, and a multi-image upload system for listings.</li>
+          <li><strong class="text-black">Mobile-First PWA:</strong> Optimized for mobile use with offline functionality, fast loading via intelligent caching, and local storage for messages and favorites.</li>
+          <li><strong class="text-black">Secure Ecosystem:</strong> Features a robust authentication system (Email, Google, Facebook) and a dedicated Admin Dashboard for listing moderation and user management.</li>
+        </ul>
+
+        <h4 class="font-bold text-lg mb-2 text-black">Technical Stack:</h4>
+        <ul class="list-disc ml-5 mb-4">
+          <li><strong class="text-black">Frontend:</strong> Next.js, TypeScript.</li>
+          <li><strong class="text-black">Backend:</strong> Symfony, PHP.</li>
+          <li><strong class="text-black">Styling:</strong> Tailwind CSS for a modern, responsive, and performant UI.</li>
+          <li><strong class="text-black">Capabilities:</strong> PWA integration, Web Push Notifications, and Mercure for real-time updates.</li>
+          <li><strong class="text-black">Infrastructure:</strong> Dockerized deployment with CI/CD pipelines via GitHub Actions and GHCR.</li>
+        </ul>
+
+        <p>
+          This project demonstrates expertise in building complex, niche-specific e-commerce solutions with a focus on performance, user experience, and modern web standards.
+        </p>
+      </div>
+    `
+  },
+  /*{
+    id: 'travel',
+    title: 'Travel Planning Software',
+    image: '/in-progress.svg',
+    link: '/',
+    intro: "A cool new project with C# .NET and Angular is currently being developed here. It will be a travel planning software.",
+    description: `
+      <div class="text-grey">
+        <p>A cool new project with C# .NET and Angular is currently being developed here. It will be a travel planning software.</p>
+      </div>
+    `
+  },
+  {
+    id: 'progress',
+    title: 'New Project',
+    image: '/in-progress.svg',
+    link: '/',
+    intro: "A cool new project is currently being developed here.",
+    description: `
+      <div class="text-grey">
+        <p>A cool new project is currently being developed here.</p>
+      </div>
+    `
+  },
+  {
+    id: 'socialinsiders',
+    title: 'Socialinsiders',
+    image: '/socialinsiders.png',
+    link: 'https://socialinsider.io/',
+    isExternal: true,
+    intro: "Socialinsiders is a social media analytics and benchmarking tool. I contributed to the development of several features, ensuring high performance and data accuracy for marketing teams worldwide.",
+    description: `
+      <div class="text-grey">
+        <p>
+          <strong class="text-black">Socialinsiders</strong> is a social media analytics and benchmarking tool. 
+          I contributed to the development of several features, ensuring high performance and data accuracy for marketing teams worldwide.
+        </p>
+      </div>
+    `
+  }*/
 ]
