@@ -20,17 +20,31 @@ export const metadata: Metadata = {
   title: "Homepage | Christian Dechant",
   description: "Homepage of Christian Dechant",
   icons: {
-    icon: "/Interestedowl.png",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/Interestedowl.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/Interestedowl.png" },
+    ],
   },
   openGraph: {
     title: "Homepage | Christian Dechant",
+    description: "Homepage of Christian Dechant",
+    url: "https://christian-dechant.de",
+    siteName: "Christian Dechant Portfolio",
     locale: "en_US",
+    type: "website",
     images: [
       {
-        url: "/interestedowl.png",
+        url: "/Interestedowl.png",
+        width: 800,
+        height: 800,
+        alt: "Christian Dechant Logo",
       },
     ],
   },
+  manifest: "/manifest.json",
 };
 
 export const viewport: Viewport = {
