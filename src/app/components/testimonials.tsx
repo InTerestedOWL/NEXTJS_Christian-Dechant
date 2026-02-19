@@ -57,7 +57,7 @@ export default function CustomerTestimonials() {
         >
           { testimonials.map((testimonial, index) => (
             <SwiperSlide key={ index }>
-              <div className="mx-auto max-w-xl rounded-2xl bg-white p-8 text-center shadow-md">
+              <div className="mx-auto max-w-md rounded-2xl bg-white p-8 text-center shadow-md">
                 { testimonial.image !== '' ? <Image
                   src={ testimonial.image }
                   alt={ testimonial.name }
