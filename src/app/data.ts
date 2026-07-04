@@ -1,7 +1,20 @@
-import { IContactBox, IExperience, IHeaderLink, IPortfolioItem, ISkill, ISocial, ITechnology, IVoluntaryWork } from "./interfaces";
+import {
+  IContactBox,
+  IExperience,
+  IHeaderLink,
+  IPortfolioItem,
+  ISkill,
+  ISocial,
+  ITechnology,
+  IVoluntaryWork,
+  IWayVentureFaq,
+  IWayVentureFeature,
+  IWayVentureUpcoming
+} from "./interfaces";
 
 export const headerLinks: IHeaderLink[] = [
   { href: '/#about', title: 'About' },
+  { href: '/#wayventure', title: 'WayVenture' },
   { href: '/#pricing', title: 'Offers' },
   { href: '/#portfolio', title: 'Portfolio' },
   { href: '/#tools', title: 'tools' },
@@ -40,27 +53,27 @@ export const socials: ISocial[] = [
 ];
 
 export const technologies: ITechnology[] = [
-  { icon: "laravel.svg" },
-  { icon: "vue.svg" },
-  { icon: "angular-icon-seeklogo.svg" },
-  { icon: "ionic_Logo.svg" },
-  { icon: "symfony.svg" },
-  { icon: "icons8-.net.svg" },
-  { icon: "cypress-1.svg" },
-  { icon: "nextjs.svg" },
-  { icon: "node-js-svgrepo-com.svg" },
-  { icon: "docker-mark-blue.svg" },
-  { icon: "tailwindcss.svg",  },
-  { icon: "php.svg" },
-  { icon: "typescript.svg", },
-  { icon: "mongodb.svg", },
-  { icon: "postgresql.svg",  },
-  { icon: "mysql.svg",  },
-  { icon: "kubernetes.svg",  },
-  { icon: "mssql.svg",  },
-  { icon: "/aws.svg",  },
-  { icon: "/azure.svg" },
-  { icon: "/cicd.svg" },
+  { icon: "laravel.svg", name: "Laravel" },
+  { icon: "vue.svg", name: "Vue.js" },
+  { icon: "angular-icon-seeklogo.svg", name: "Angular" },
+  { icon: "ionic_Logo.svg", name: "Ionic" },
+  { icon: "symfony.svg", name: "Symfony" },
+  { icon: "icons8-.net.svg", name: ".NET" },
+  { icon: "cypress-1.svg", name: "Cypress" },
+  { icon: "nextjs.svg", name: "Next.js" },
+  { icon: "node-js-svgrepo-com.svg", name: "Node.js" },
+  { icon: "docker-mark-blue.svg", name: "Docker" },
+  { icon: "tailwindcss.svg", name: "Tailwind CSS" },
+  { icon: "php.svg", name: "PHP" },
+  { icon: "typescript.svg", name: "TypeScript" },
+  { icon: "mongodb.svg", name: "MongoDB" },
+  { icon: "postgresql.svg", name: "PostgreSQL" },
+  { icon: "mysql.svg", name: "MySQL" },
+  { icon: "kubernetes.svg", name: "Kubernetes" },
+  { icon: "mssql.svg", name: "Microsoft SQL Server" },
+  { icon: "/aws.svg", name: "AWS" },
+  { icon: "/azure.svg", name: "Azure" },
+  { icon: "/cicd.svg", name: "CI/CD" },
 ];
 
 export const experiences: IExperience[] = [
@@ -307,3 +320,74 @@ export const portfolioItems: IPortfolioItem[] = [
     `
   }*/
 ]
+
+export const wayVentureFeatures: IWayVentureFeature[] = [
+  {
+    icon: 'bx-shield-quarter',
+    title: 'Digital Travel Pass',
+    description: 'Every country you visit gets stamped into a digital passport, so your travel history becomes something you can actually look back on.',
+    badge: 'USP',
+  },
+  {
+    icon: 'bx-wallet',
+    title: 'Trip Budget Planner',
+    description: 'Track spending per trip and per waypoint, so you always know what a spontaneous detour is going to cost before you take it.',
+  },
+  {
+    icon: 'bx-map-alt',
+    title: 'Waypoints & Travel Notices',
+    description: 'Add waypoints on the fly, get country-specific travel advisories, and share a route via link with fellow travelers.',
+  },
+  {
+    icon: 'bx-bot',
+    title: 'AI Trip Timeline',
+    description: 'An AI-generated summary turns raw waypoints and dates into a readable story of the trip, automatically.',
+    badge: 'AI',
+  },
+  {
+    icon: 'bx-group',
+    title: 'Sharing & Invites',
+    description: 'Share a trip with shared-link or invite-link access, so friends and family can follow along without an account.',
+  },
+  {
+    icon: 'bx-car',
+    title: 'Vehicle Management',
+    description: 'Keep vehicles, from the daily car to the camper van, attached to the trips they belong to.',
+  },
+];
+
+export const wayVentureUpcoming: IWayVentureUpcoming[] = [
+  { icon: 'bx-heart', title: 'Community Features' },
+  { icon: 'bx-layout', title: 'Creator Mode' },
+  { icon: 'bx-list-check', title: 'Equipment Checklists' },
+  { icon: 'bx-buildings', title: 'Camp Spots' },
+  { icon: 'bx-brain', title: 'AI Travel Agent' },
+  { icon: 'bx-book-content', title: 'Trip Photobook' },
+];
+
+export const wayVentureFaq: IWayVentureFaq[] = [
+  {
+    question: 'What is WayVenture?',
+    answer: 'WayVenture is a mobile-first travel companion app for planning and living through road trips and spontaneous getaways. It combines a digital travel pass, trip budgeting, AI-generated trip timelines, waypoint-based travel advisories, and vehicle management in a single all-in-one travel app.',
+  },
+  {
+    question: 'Who built WayVenture?',
+    answer: 'WayVenture is an independent product designed and built by Christian Dechant, a full-stack developer, as a self-initiated venture alongside his freelance work.',
+  },
+  {
+    question: 'What makes WayVenture different from other travel planners?',
+    answer: 'WayVenture supports both planned trips and spontaneous trips as first-class citizens. A spontaneous trip can be created in a single step with everything else, name, start date, budget, filled in automatically, while planned trips get a full itinerary with waypoints and country-aware travel advisories.',
+  },
+  {
+    question: 'Is WayVenture free to use?',
+    answer: 'WayVenture offers a free tier alongside paid Weltenbummler and Globetrotter tiers that unlock features like per-waypoint travel advice and higher usage limits.',
+  },
+  {
+    question: 'What is coming next for WayVenture?',
+    answer: 'The roadmap includes community features, a creator mode, equipment checklists, camp spot discovery, an AI travel agent, a trip photobook, and a "Document Safe" for securely storing travel and vehicle documents with OCR and expiry reminders.',
+  },
+  {
+    question: 'Where can I try WayVenture?',
+    answer: 'WayVenture is live at wayventure.de in both German and English, with no credit card required to start.',
+  },
+];

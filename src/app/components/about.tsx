@@ -1,4 +1,5 @@
 'use client';
+import Image from "next/image";
 import TitleWithText from "@/app/components/shared/titleWithText";
 import LinkWithIcon from "./shared/linkWithIcon";
 import { ISkill, ISocial } from "../interfaces";
@@ -25,10 +26,12 @@ export default function About({ socials, skills }: { socials: ISocial[], skills:
         <div className="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
           <div className="flex flex-col lg:flex-row lg:items-start lg:gap-8">
             <div className="lg:w-1/4 shrink-0 mb-6 lg:mb-0">
-              <img
-                src="/Christian Dechant.jpg"
+              <Image
+                src="/Christian%20Dechant.jpg"
+                width={ 400 }
+                height={ 400 }
                 className="mx-auto rounded-full border-4 border-lila shadow-lg w-48 h-48 lg:w-full lg:h-auto object-cover aspect-square"
-                alt="Christian Dechant"
+                alt="Christian Dechant, freelance app, web and mobile developer"
               />
             </div>
             <div className="w-full lg:w-3/4">

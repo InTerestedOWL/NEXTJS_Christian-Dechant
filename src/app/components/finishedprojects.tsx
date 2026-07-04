@@ -20,13 +20,13 @@ export default function FinishedProjects() {
                   width="40" height="40"
                   src="/icon-project.svg"
                   className="mx-auto h-12 w-auto md:h-20"
-                  alt="icon project"
+                  alt=""
                 />
               </div>
               <div className="pt-5 md:pl-5 md:pt-0">
-                <h1 className="font-body text-2xl font-bold text-primary md:text-4xl">
+                <p className="font-body text-2xl font-bold text-primary md:text-4xl">
                   Full-Stack
-                </h1>
+                </p>
                 <h4
                   className="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
                 >
@@ -43,13 +43,13 @@ export default function FinishedProjects() {
                   width="40" height="40"
                   src="/icon-award.svg"
                   className="mx-auto h-12 w-auto md:h-20"
-                  alt="icon award"
+                  alt=""
                 />
               </div>
               <div className="pt-5 md:pl-5 md:pt-0">
-                <h1 className="font-body text-2xl font-bold text-primary md:text-4xl">
+                <p className="font-body text-2xl font-bold text-primary md:text-4xl">
                   DevOps
-                </h1>
+                </p>
                 <h4
                   className="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
                 >
@@ -66,13 +66,13 @@ export default function FinishedProjects() {
                   width="40" height="40"
                   src="/icon-happy.svg"
                   className="mx-auto h-12 w-auto md:h-20"
-                  alt="icon happy clients"
+                  alt=""
                 />
               </div>
               <div className="pt-5 md:pl-5 md:pt-0">
-                <h1 className="font-body text-2xl font-bold text-primary md:text-4xl">
+                <p className="font-body text-2xl font-bold text-primary md:text-4xl">
                   Multiple
-                </h1>
+                </p>
                 <h4
                   className="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
                 >
@@ -89,13 +89,13 @@ export default function FinishedProjects() {
                   width="40" height="40"
                   src="/icon-puzzle.svg"
                   className="mx-auto h-12 w-auto md:h-20"
-                  alt="icon puzzle"
+                  alt=""
                 />
               </div>
               <div className="pt-5 md:pl-5 md:pt-0">
-                <h1 className="font-body text-2xl font-bold text-primary md:text-4xl">
+                <p className="font-body text-2xl font-bold text-primary md:text-4xl">
                   Numerous
-                </h1>
+                </p>
                 <h4
                   className="text-grey-dark font-header text-base font-medium leading-loose md:text-xl"
                 >

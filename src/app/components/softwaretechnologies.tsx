@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ITechnology } from "../interfaces";
 import Title from "./shared/title";
 
@@ -11,9 +12,11 @@ export default function SoftwareTechnologies({technologies}: {technologies : ITe
           <div className="flex flex-wrap items-center justify-center pt-4 sm:pt-4">
             { technologies.map((item, index) => (
               <span className="m-8 block" key={ index }>
-              <img
-                src={ item.icon }
-                alt="client logo"
+              <Image
+                src={ item.icon.startsWith('/') ? item.icon : `/${ item.icon }` }
+                alt={ `${ item.name } logo` }
+                width={ 96 }
+                height={ 48 }
                 className="mx-auto block h-12 w-auto"
               />
                 </span>

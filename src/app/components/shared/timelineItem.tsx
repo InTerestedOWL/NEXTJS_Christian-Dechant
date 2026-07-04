@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function TimelineItem({ imageSrc, dateFrom, dateTill, title, description, classAttribute, margin }: {
   imageSrc: string,
   dateFrom: string,
@@ -12,10 +14,12 @@ export default function TimelineItem({ imageSrc, dateFrom, dateTill, title, desc
       <div className="md:w-2/5">
         <div className="flex justify-center md:justify-start">
           <span className="shrink-0" style={ { marginTop: margin + 'px' } }>
-            <img
+            <Image
               src={ imageSrc }
+              width={ 200 }
+              height={ 80 }
               className={ `h-auto ${ classAttribute }` }
-              alt="company logo"
+              alt={ `Employer logo for the ${ title } role` }
             />
           </span>
           <div className="relative ml-3 hidden w-full md:block">

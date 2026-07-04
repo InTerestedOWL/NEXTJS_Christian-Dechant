@@ -65,7 +65,7 @@ export default function VoluntaryWork({ voluntaryWorks }: { voluntaryWorks: IVol
                         <img
                           key={ i }
                           src={ img }
-                          alt="Voluntary work detail"
+                          alt={ `${ item.title } — photo ${ i + 1 }` }
                           className=" w-auto rounded object-cover"
                         />
                       )) }

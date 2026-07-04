@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { useStatus } from "../context";
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
@@ -12,6 +13,8 @@ export default function ClientLayout({
   children: React.ReactNode;
 }>) {
   const { status } = useStatus();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const [ isVisible, setIsVisible ] = useState(false);
 
   const handleScroll = () => {
@@ -45,7 +48,7 @@ export default function ClientLayout({
     >
     <div id="main" className="relative">
       <div>
-        <Header socials={ socials }></Header>
+        <Header socials={ socials } isHome={ isHome }></Header>
         { children }
       </div>
       <Footer socials={ socials }></Footer>

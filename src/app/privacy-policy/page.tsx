@@ -1,11 +1,21 @@
+import type { Metadata } from "next";
 import Title from "../components/shared/title";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Christian Dechant",
+  description: "Learn how Christian Dechant collects, uses and protects personal data on christian-dechant.de, in accordance with the GDPR.",
+  alternates: {
+    canonical: "/privacy-policy",
+  },
+};
 
 export default function PrivacyPolicy() {
   return (
     <>
       <div className="container py-16 md:py-20" id="portfolio">
         <section className="container py-16 md:py-20">
-          <Title title={ 'Privacy Policy' }
+          <Title as="h1"
+                 title={ 'Privacy Policy' }
                  subtitle={ 'Your privacy is important to me. Learn how I handle your personal data below.' }
                  text={ '' }></Title>
 

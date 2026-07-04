@@ -22,6 +22,11 @@
   --color-blog-gradient-from: #8f9098;
   --color-blog-gradient-to: #222222;
 
+  --color-wv-primary: #f08235;
+  --color-wv-light: #ffaf7b;
+  --color-wv-dark: #1a1005;
+  --color-wv-surface: #fcfbf8;
+
   --shadow-default: 0 2px 18px rgba(0, 0, 0, 0.06);
   --shadow-md: 0 -3px 36px rgba(0, 0, 0, 0.12);
 

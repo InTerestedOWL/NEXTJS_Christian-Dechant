@@ -1,4 +1,5 @@
 import About from "@/app/components/about";
+import WayVenture from "@/app/components/wayventure";
 import Portfolio from "@/app/components/portfolio";
 import Experience from "@/app/components/experience";
 import FinishedProjects from "@/app/components/finishedprojects";
@@ -13,11 +14,27 @@ import CustomerTestimonials from "@/app/components/testimonials";
 import VoluntaryWork from "@/app/components/voluntaryWork";
 
 export default function Home() {
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Christian Dechant",
+    url: "https://christian-dechant.de",
+    image: "https://christian-dechant.de/Interestedowl.png",
+    jobTitle: "Freelance App, Web and Mobile Developer",
+    description: "Freelance App, Web and Mobile Developer with 6+ years of experience building scalable software with C#, Next.js, TypeScript and more.",
+    sameAs: socials.map((social) => social.url),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={ { __html: JSON.stringify(personJsonLd) } }
+      />
       <About
         socials={ socials }
         skills={ skills }></About>
+      <WayVenture></WayVenture>
       <CustomerTestimonials/>
       <VoluntaryWork
         voluntaryWorks={ voluntaryWorks }></VoluntaryWork>

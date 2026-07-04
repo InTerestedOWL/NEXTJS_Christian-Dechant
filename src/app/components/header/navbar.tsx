@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { IHeaderLink } from "../../interfaces";
 import { useRouter } from 'next/navigation'; // Richtig für App Router
@@ -18,7 +19,7 @@ export default function Navbar({headerLinks} : {headerLinks: IHeaderLink[]}) {
         <div className="container flex items-center justify-between">
           <div>
             <Link href="/">
-              <img src="/Interestedowl.png" className="w-16 lg:w-48" alt="logo image"/>
+              <Image src="/Interestedowl.png" width={ 192 } height={ 192 } className="w-16 lg:w-48" alt="Christian Dechant logo"/>
             </Link>
           </div>
           <div className="hidden lg:block">
@@ -54,7 +55,7 @@ export default function Navbar({headerLinks} : {headerLinks: IHeaderLink[]}) {
             className="absolute top-0 right-0 mt-4 mr-4"
             onClick={ () => setStatus(false) }
           >
-            <img src="/icon-close.svg" className="h-10 w-auto" alt=""/>
+            <Image src="/icon-close.svg" width={ 40 } height={ 40 } className="h-10 w-auto" alt=""/>
           </button>
 
           <ul className={`mt-8 flex flex-col`} >

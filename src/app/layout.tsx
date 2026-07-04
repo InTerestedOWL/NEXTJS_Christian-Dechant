@@ -16,9 +16,27 @@ const geistMono = Geist_Mono({
   subsets: [ "latin" ],
 });
 
+const homeTitle = "Christian Dechant | Freelance App, Web & Mobile Developer";
+const homeDescription = "Christian Dechant is a freelance App, Web and Mobile Developer with 6+ years of experience building scalable software with C#, Next.js, TypeScript and more. Explore my portfolio, services and the WayVenture travel planner app.";
+
 export const metadata: Metadata = {
-  title: "Homepage | Christian Dechant",
-  description: "Homepage of Christian Dechant",
+  metadataBase: new URL("https://christian-dechant.de"),
+  title: homeTitle,
+  description: homeDescription,
+  keywords: [
+    "Christian Dechant",
+    "freelance developer",
+    "app developer",
+    "web developer",
+    "mobile developer",
+    "full-stack developer",
+    "C# developer",
+    "Next.js developer",
+    "software freelancer Germany",
+  ],
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -29,8 +47,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Homepage | Christian Dechant",
-    description: "Homepage of Christian Dechant",
+    title: homeTitle,
+    description: homeDescription,
     url: "https://christian-dechant.de",
     siteName: "Christian Dechant Portfolio",
     locale: "en_US",
@@ -43,6 +61,12 @@ export const metadata: Metadata = {
         alt: "Christian Dechant Logo",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: homeTitle,
+    description: homeDescription,
+    images: [ "/Interestedowl.png" ],
   },
   manifest: "/manifest.json",
 };

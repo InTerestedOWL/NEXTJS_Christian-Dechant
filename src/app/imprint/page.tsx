@@ -1,10 +1,20 @@
+import type { Metadata } from "next";
 import Title from "../components/shared/title";
+
+export const metadata: Metadata = {
+  title: "Imprint | Christian Dechant",
+  description: "Legal notice and contact information for Christian Dechant, in accordance with § 5 DDG.",
+  alternates: {
+    canonical: "/imprint",
+  },
+};
 
 export default function Imprint() {
   return (
     <>
       <div className="container py-16 md:py-20" id="imprint">
-        <Title title={ 'Imprint' }
+        <Title as="h1"
+               title={ 'Imprint' }
                subtitle={ 'Information according to § 5 DDG' }
                text={ '' }></Title>
         <div className="mt-6">

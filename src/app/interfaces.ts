@@ -12,6 +12,7 @@ export interface IHeaderLink {
 
 export interface ITechnology {
   icon: string,
+  name: string,
 }
 
 export interface IExperience {
@@ -63,4 +64,21 @@ export interface IPortfolioItem {
   description?: string,
   link?: string,
   isExternal?: boolean,
+}
+
+export interface IWayVentureFeature {
+  icon: string,
+  title: string,
+  description: string,
+  badge?: string,
+}
+
+export interface IWayVentureUpcoming {
+  icon: string,
+  title: string,
+}
+
+export interface IWayVentureFaq {
+  question: string,
+  answer: string,
 }
