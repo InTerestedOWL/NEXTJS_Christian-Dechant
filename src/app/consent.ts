@@ -52,3 +52,4 @@ export function hasConsent(category: ConsentCategory) {
 export function openCookieSettings() {
   window.dispatchEvent(new Event(OPEN_SETTINGS_EVENT));
 }
+
