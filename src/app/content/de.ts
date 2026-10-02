@@ -258,7 +258,7 @@ export const de: SiteContent = {
     items: [
       {
         title: 'Freelance Senior Developer & AI-Ambassador',
-        period: 'Seit Juni 2026',
+        period: 'Seit Juli 2027',
         text: 'Entwicklung von skalierbaren Next.js-Websystemen und API-Backends. Für eine Agentur mit Fokus auf KI-Entwicklung bringe ich Prinzipien klassischer Softwareentwicklung in agentische Workflows und MCP-Server.',
         accent: 'brand',
       },

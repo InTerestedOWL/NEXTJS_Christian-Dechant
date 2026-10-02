@@ -257,7 +257,7 @@ export const en: SiteContent = {
     items: [
       {
         title: 'Freelance Senior Developer & AI Ambassador',
-        period: 'Since June 2026',
+        period: 'Since July 2025',
         text: 'Building scalable Next.js web systems and API backends. For an agency focused on AI development, I bring the principles of traditional software engineering into agentic workflows and MCP servers.',
         accent: 'brand',
       },
